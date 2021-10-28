@@ -49,6 +49,7 @@ def residual_unit(data, num_filter, stride, dim_match, name, bottle_neck=True, b
                                             workspace=workspace, name=name+'_sc')
         if memonger:
             shortcut._set_attr(mirror_stage='True')
+            # conv3._set_attr(mirror_stage='True')
         return conv3 + shortcut
     else:
         bn1 = mx.sym.BatchNorm(data=data, fix_gamma=False, momentum=bn_mom, eps=2e-5, name=name + '_bn1')
@@ -66,6 +67,7 @@ def residual_unit(data, num_filter, stride, dim_match, name, bottle_neck=True, b
                                             workspace=workspace, name=name+'_sc')
         if memonger:
             shortcut._set_attr(mirror_stage='True')
+            # conv2._set_attr(mirror_stage='True')
         return conv2 + shortcut
 
 def resnet(units, num_stages, filter_list, num_classes, image_shape, bottle_neck=True, bn_mom=0.9, workspace=256, dtype='float32', memonger=False):

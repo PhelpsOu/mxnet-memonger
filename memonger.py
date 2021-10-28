@@ -66,9 +66,6 @@ def make_mirror_plan(sym, threshold, plan_info=None, **kwargs):
     local_size = 0
     save_size = 0
     max_size = 0
-    last_sb = None
-    last_local = 0
-    period = 1
     last_stage = ''
     stage_decision = ''
 
@@ -76,29 +73,37 @@ def make_mirror_plan(sym, threshold, plan_info=None, **kwargs):
         sb = internals[idx]
         name, shape = item
         if is_param(name):
+            # param size 指参数大小，即输入的arg_maps
             param_size += prod(shape) * 4
             continue
         else:
+            # total_size 指所有中间临时变量的大小
+            # local_size <= total_size，指进行Recompute的Block占用的大小
             total_size += prod(shape) * 4
             local_size += prod(shape) * 4
+            # 将所有中间结果标记mirror
             sb._set_attr(force_mirroring='True')
 
+        # 只对网络结构中显式指定mirror_stage的节点进行考察，从中选出可能的checkpoint
         if sb.attr('mirror_stage') is not None:
             stage = sb.attr('mirror_stage')
             if stage == 'True' or stage != last_stage:
                 if local_size > threshold:
+                    # Block大小大于阈值，将其设置为checkpoint
+                    # save_size为所有checkpoint加起来的大小，max_size为最大Block的大小
                     save_size += prod(shape) * 4
                     max_size = max(max_size, local_size)
                     local_size = 0
                     stage_decision = 'False'
-                    sb._set_attr(force_mirroring=stage_decision)
+                    sb._set_attr(force_mirroring='False')
                 else:
                     stage_decision = 'True'
                     pass
                 last_stage = stage
+            # 最后一个checkpoint
             elif stage == last_stage and stage_decision == 'False':
                 save_size += prod(shape) * 4
-                sb._set_attr(force_mirroring=stage_decision)
+                sb._set_attr(force_mirroring='False')
 
     if plan_info is not None:
         plan_info['max_size'] = max_size
@@ -119,7 +124,7 @@ def get_cost(sym, type_dict=None, **kwargs):
     return int(texec.debug_str().split('\n')[-3].split()[1])
 
 
-def search_plan(sym, ntrial=6, type_dict=None, **kwargs):
+def search_plan(sym, ntrial=7, type_dict=None, **kwargs):
     """Quickly heurestic search over possible plans to find good memory plan.
 
     Parameters
@@ -136,29 +141,39 @@ def search_plan(sym, ntrial=6, type_dict=None, **kwargs):
     min_cost = None
     nbegin = 3
 
+    # nbegin次
     for k in range(nbegin):
         info = {}
         sym = make_mirror_plan(sym, threshold=threshold, plan_info=info, **kwargs)
         cost = get_cost(sym, type_dict, **kwargs)
         save_size = info['save_size'] >> 20
         local_size = info['max_size'] >> 20
+        # save_size为所有checkpoint加起来的大小，max_size为最大Block的大小
+        # save_size越大，说明ckpt越多，单个Block就越小，local_size(max_size)就越小，二者成反比
+        # 我们的目标是让save——size和local_size都尽量小，用guess来衡量
         guess = int(math.sqrt(save_size * local_size / 2))
         if min_cost is None or min_cost > cost:
             min_cost = cost
+        # min_threshold 表示历次搜索最大Block中的最小值
         if min_threshold is None or local_size < min_threshold:
             min_threshold = local_size
         print ("Search threshold=%d MB, cost=%d MB" % (threshold, cost))
         history.append((cost, threshold, sym))
+        # guess是历史搜索中做得最好的（值最小的），所以超过threhold的就不考虑
         threshold = guess
 
+    # max_threshold = sqrt(save_size * local_size)
     max_threshold = threshold * math.sqrt(2)
+    # step = (sqrt(save_size*local_size) - local_size) / ntrial
     step = int((max_threshold - min_threshold) / ntrial)
+    step = abs(step)
     threshold = min_threshold + step
     if step > 0:
+        # 额外的ntrial次grid搜索
         for k in range(ntrial):
             sym = make_mirror_plan(sym, threshold=threshold, plan_info=info, **kwargs)
             cost = get_cost(sym, type_dict, **kwargs)
-            print ("Search threshold=%d MB, cost=%d MB" % (threshold, cost))
+            print ("Grid Search: threshold=%d MB, cost=%d MB" % (threshold, cost))
             history.append((cost, threshold, sym))
             threshold += step
 

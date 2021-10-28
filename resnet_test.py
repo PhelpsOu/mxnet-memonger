@@ -28,7 +28,7 @@ train_data = mx.io.NDArrayIter(mnist["train_data"], mnist["train_label"], batch_
 
 # 构建网络
 net = resnet.get_symbol(10, 50, "3,256,256")
-# mx.viz.print_summary(net)
+# mx.viz.print_summary(net, {'data':(32,3,256,256),})
 
 # call memory optimizer to search possible memory plan.
 dshape = (batch_size, 3, 256, 256)
