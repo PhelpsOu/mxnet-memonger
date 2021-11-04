@@ -6,7 +6,7 @@ import struct
 import gzip
 from models import resnet
 
-#os.environ['MXNET_MEMORY_OPT'] = '1'
+os.environ['MXNET_MEMORY_OPT'] = '1'
 value = os.environ.get('MXNET_MEMORY_OPT')
 print("MXNET_MEMORY_OPT = %s" % (value))
 
@@ -52,7 +52,7 @@ print('New feature map cost=%d MB' % new_cost)
 ctx = mx.gpu(0)
 
 # model = mx.mod.Module(net, context=ctx)
-executor = net_planned.simple_bind(ctx=ctx, grad_req='write', data=dshape)
+executor = net.simple_bind(ctx=ctx, grad_req='write', data=dshape)
 
 # initialize the weights
 for r in executor.arg_arrays:
@@ -65,7 +65,7 @@ for batch in train_data:
     executor.forward()
     executor.backward()
     # update params
-    for pname, W, G in zip(net_planned.list_arguments(), executor.arg_arrays, executor.grad_arrays):
+    for pname, W, G in zip(net.list_arguments(), executor.arg_arrays, executor.grad_arrays):
         # Don't update inputs
         if pname in ['data', 'softmax_label']:
             continue

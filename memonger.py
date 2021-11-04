@@ -1,7 +1,7 @@
 import mxnet as mx
 import math
 
-debug = False
+debug = True
 
 def prod(shape):
     """Get product of the shape.

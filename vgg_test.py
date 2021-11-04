@@ -6,7 +6,7 @@ import struct
 import gzip
 from models import vggnet
 
-#os.environ['MXNET_MEMORY_OPT'] = '1'
+os.environ['MXNET_MEMORY_OPT'] = '1'
 value = os.environ.get('MXNET_MEMORY_OPT')
 print("MXNET_MEMORY_OPT = %s" % (value))
 
@@ -49,15 +49,28 @@ new_cost = memonger.get_cost(net_planned, data=dshape)
 print('Old feature map cost=%d MB' % old_cost)
 print('New feature map cost=%d MB' % new_cost)
 
-ctx = [mx.gpu(0)]
+ctx = mx.gpu(0)
 
 # model = mx.mod.Module(net, context=ctx)
-model = mx.mod.Module(net_planned, context=ctx)
+executor = net_planned.simple_bind(ctx=ctx, grad_req='write', data=dshape)
 
-model.bind(train_data.provide_data, train_data.provide_label)
-model.init_params()
-model.init_optimizer()
+# initialize the weights
+for r in executor.arg_arrays:
+    r[:] = np.random.randn(*r.shape)*0.02
 
+cnt = 0
 for batch in train_data:
-    model.forward_backward(batch)
-    model.update()
+    executor.arg_dict['data'] = batch.data[0]
+    executor.arg_dict['softmax_label'] = batch.label[0]
+    executor.forward()
+    executor.backward()
+    # update params
+    for pname, W, G in zip(net_planned.list_arguments(), executor.arg_arrays, executor.grad_arrays):
+        # Don't update inputs
+        if pname in ['data', 'softmax_label']:
+            continue
+        W[:] = W - G * .001
+    cnt = cnt+1
+
+mx.nd.waitall()
+print("done for traning %d batches."%(cnt))
