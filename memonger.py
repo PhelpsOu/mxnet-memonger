@@ -1,6 +1,8 @@
 import mxnet as mx
 import math
 
+debug = False
+
 def prod(shape):
     """Get product of the shape.
     """
@@ -96,6 +98,9 @@ def make_mirror_plan(sym, threshold, plan_info=None, **kwargs):
                     local_size = 0
                     stage_decision = 'False'
                     sb._set_attr(force_mirroring='False')
+                    if(debug):
+                        print(" - Select Ckpt: %s"%(name))
+                        print(" - Save size: %dMB, max_size: %dMB"%(save_size>>20, max_size>>20))
                 else:
                     stage_decision = 'True'
                     pass
@@ -104,7 +109,12 @@ def make_mirror_plan(sym, threshold, plan_info=None, **kwargs):
             elif stage == last_stage and stage_decision == 'False':
                 save_size += prod(shape) * 4
                 sb._set_attr(force_mirroring='False')
-
+                if(debug):
+                    print(" - Select Ckpt: %s"%(name))
+                    print(" - Save size: %d, max_size: %d"%(save_size, max_size))
+    if(debug):
+        print("param_size: %dMB"%(param_size>>20))
+        print("total_temp_size: %dMB"%(total_size>>20))
     if plan_info is not None:
         plan_info['max_size'] = max_size
         plan_info['save_size'] = save_size
@@ -124,7 +134,7 @@ def get_cost(sym, type_dict=None, **kwargs):
     return int(texec.debug_str().split('\n')[-3].split()[1])
 
 
-def search_plan(sym, ntrial=7, type_dict=None, **kwargs):
+def search_plan(sym, ntrial=5, type_dict=None, **kwargs):
     """Quickly heurestic search over possible plans to find good memory plan.
 
     Parameters
@@ -157,7 +167,9 @@ def search_plan(sym, ntrial=7, type_dict=None, **kwargs):
         # min_threshold 表示历次搜索最大Block中的最小值
         if min_threshold is None or local_size < min_threshold:
             min_threshold = local_size
-        print ("Search threshold=%d MB, cost=%d MB" % (threshold, cost))
+        if(debug):
+            print ("Search threshold=%d MB, cost=%d MB" % (threshold, cost))
+            print('-----------------------------------------------------')  
         history.append((cost, threshold, sym))
         # guess是历史搜索中做得最好的（值最小的），所以超过threhold的就不考虑
         threshold = guess
@@ -173,7 +185,9 @@ def search_plan(sym, ntrial=7, type_dict=None, **kwargs):
         for k in range(ntrial):
             sym = make_mirror_plan(sym, threshold=threshold, plan_info=info, **kwargs)
             cost = get_cost(sym, type_dict, **kwargs)
-            print ("Grid Search: threshold=%d MB, cost=%d MB" % (threshold, cost))
+            if(debug):
+                print ("Grid Search: threshold=%d MB, cost=%d MB" % (threshold, cost))
+                print('-----------------------------------------------------')
             history.append((cost, threshold, sym))
             threshold += step
 

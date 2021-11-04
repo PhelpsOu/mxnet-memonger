@@ -6,8 +6,16 @@ import struct
 import gzip
 from models import resnet
 
-# 数据集
+#os.environ['MXNET_MEMORY_OPT'] = '1'
+value = os.environ.get('MXNET_MEMORY_OPT')
+print("MXNET_MEMORY_OPT = %s" % (value))
 
+def save_debug_str(sym, type_dict=None, **kwargs):
+    with open("log_resnet.txt", "w") as f:
+        texec = sym.simple_bind(ctx=mx.gpu(), grad_req='write', type_dict=type_dict, **kwargs)
+        f.write(texec.debug_str())
+
+# 数据集
 def read_data(label_url, image_url):
     with gzip.open(mx.test_utils.download(label_url)) as flbl:
         struct.unpack(">II", flbl.read(8))
@@ -33,6 +41,7 @@ net = resnet.get_symbol(10, 50, "3,256,256")
 # call memory optimizer to search possible memory plan.
 dshape = (batch_size, 3, 256, 256)
 net_planned = memonger.search_plan(net, data=dshape)
+# save_debug_str(net_planned, data=dshape)
 
 old_cost = memonger.get_cost(net, data=dshape)
 new_cost = memonger.get_cost(net_planned, data=dshape)
@@ -40,19 +49,28 @@ new_cost = memonger.get_cost(net_planned, data=dshape)
 print('Old feature map cost=%d MB' % old_cost)
 print('New feature map cost=%d MB' % new_cost)
 
-ctx = [mx.gpu(0)]
+ctx = mx.gpu(0)
 
 # model = mx.mod.Module(net, context=ctx)
-model = mx.mod.Module(net_planned, context=ctx)
+executor = net_planned.simple_bind(ctx=ctx, grad_req='write', data=dshape)
 
-model.bind(train_data.provide_data, train_data.provide_label)
-model.init_params()
-model.init_optimizer()
+# initialize the weights
+for r in executor.arg_arrays:
+    r[:] = np.random.randn(*r.shape)*0.02
 
 cnt = 0
 for batch in train_data:
-    model.forward_backward(batch)
-    model.update()
-    cnt = cnt + 1
-    if cnt == 20:
-        break
+    executor.arg_dict['data'] = batch.data[0]
+    executor.arg_dict['softmax_label'] = batch.label[0]
+    executor.forward()
+    executor.backward()
+    # update params
+    for pname, W, G in zip(net_planned.list_arguments(), executor.arg_arrays, executor.grad_arrays):
+        # Don't update inputs
+        if pname in ['data', 'softmax_label']:
+            continue
+        W[:] = W - G * .001
+    cnt = cnt+1
+
+mx.nd.waitall()
+print("done for traning %d batches."%(cnt))
