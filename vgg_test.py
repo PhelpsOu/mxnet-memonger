@@ -6,9 +6,13 @@ import struct
 import gzip
 from models import vggnet
 
-os.environ['MXNET_MEMORY_OPT'] = '1'
+os.environ['OPTLEVEL'] = '0'
+
+os.environ['MXNET_MEMORY_OPT'] = '0'
 value = os.environ.get('MXNET_MEMORY_OPT')
 print("MXNET_MEMORY_OPT = %s" % (value))
+
+batch_size = 32
 
 def save_debug_str(sym, type_dict=None, **kwargs):
     with open("log_vgg.txt", "w") as f:
@@ -24,14 +28,13 @@ def read_data(label_url, image_url):
         _, _, rows, cols = struct.unpack(">IIII", fimg.read(16))
         image = np.frombuffer(fimg.read(), dtype=np.uint8).reshape(len(label), rows, cols)
         image = image.reshape(image.shape[0], 1, 28, 28).astype(np.float32)/255
-        image = np.resize(image, (640, 3, 256, 256))
+        image = np.resize(image, (batch_size*15, 3, 256, 256))
     return (label, image)
 
 path = 'http://data.mxnet.io/data/mnist/'
 (train_lbl, train_img) = read_data(path+'train-labels-idx1-ubyte.gz', path+'train-images-idx3-ubyte.gz')
 mnist =  {'train_data':train_img, 'train_label':train_lbl}
 
-batch_size = 32
 train_data = mx.io.NDArrayIter(mnist["train_data"], mnist["train_label"], batch_size, shuffle=True)
 
 # 构建网络
@@ -41,7 +44,7 @@ net = vggnet.get_symbol(10, num_layers=11)
 # call memory optimizer to search possible memory plan.
 dshape = (batch_size, 3, 256, 256)
 net_planned = memonger.search_plan(net, data=dshape)
-save_debug_str(net_planned, data=dshape)
+# save_debug_str(net, data=dshape)
 
 old_cost = memonger.get_cost(net, data=dshape)
 new_cost = memonger.get_cost(net_planned, data=dshape)
@@ -52,7 +55,7 @@ print('New feature map cost=%d MB' % new_cost)
 ctx = mx.gpu(0)
 
 # model = mx.mod.Module(net, context=ctx)
-executor = net_planned.simple_bind(ctx=ctx, grad_req='write', data=dshape)
+executor = net.simple_bind(ctx=ctx, grad_req='write', data=dshape)
 
 # initialize the weights
 for r in executor.arg_arrays:
@@ -65,7 +68,7 @@ for batch in train_data:
     executor.forward()
     executor.backward()
     # update params
-    for pname, W, G in zip(net_planned.list_arguments(), executor.arg_arrays, executor.grad_arrays):
+    for pname, W, G in zip(net.list_arguments(), executor.arg_arrays, executor.grad_arrays):
         # Don't update inputs
         if pname in ['data', 'softmax_label']:
             continue

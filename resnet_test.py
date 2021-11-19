@@ -6,9 +6,18 @@ import struct
 import gzip
 from models import resnet
 
+# graph coloring algorithm
+os.environ['MXNET_EXEC_NUM_TEMP'] = '1'
+# The percentage of GPU memory to reserve for things other than the GPU array, such as kernel launch or cudnn handle space.
+os.environ['MXNET_GPU_MEM_POOL_RESERVE'] = '5'
+os.environ['MXNET_GPU_WORKER_NTHREADS'] = '1'
+
 os.environ['MXNET_MEMORY_OPT'] = '1'
+os.environ['OPTLEVEL'] = '2'
 value = os.environ.get('MXNET_MEMORY_OPT')
 print("MXNET_MEMORY_OPT = %s" % (value))
+
+batch_size = 32
 
 def save_debug_str(sym, type_dict=None, **kwargs):
     with open("log_resnet.txt", "w") as f:
@@ -24,22 +33,24 @@ def read_data(label_url, image_url):
         _, _, rows, cols = struct.unpack(">IIII", fimg.read(16))
         image = np.frombuffer(fimg.read(), dtype=np.uint8).reshape(len(label), rows, cols)
         image = image.reshape(image.shape[0], 1, 28, 28).astype(np.float32)/255
-        image = np.resize(image, (1024, 3, 256, 256))
+        image = np.resize(image, (batch_size*15, 3, 256, 256))
     return (label, image)
 
 path = 'http://data.mxnet.io/data/mnist/'
 (train_lbl, train_img) = read_data(path+'train-labels-idx1-ubyte.gz', path+'train-images-idx3-ubyte.gz')
 mnist =  {'train_data':train_img, 'train_label':train_lbl}
 
-batch_size = 32
 train_data = mx.io.NDArrayIter(mnist["train_data"], mnist["train_label"], batch_size, shuffle=True)
 
 # 构建网络
 net = resnet.get_symbol(10, 50, "3,256,256")
-# mx.viz.print_summary(net, {'data':(32,3,256,256),})
 
 # call memory optimizer to search possible memory plan.
 dshape = (batch_size, 3, 256, 256)
+
+# mx.viz.print_summary(net, {'data':(batch_size,3,256,256),})
+# mx.viz.plot_network(net, title='resnet-50', save_format='jpg', hide_weights=True, shape={'data':(batch_size,3,256,256),}).save('resnet-50','./')
+
 net_planned = memonger.search_plan(net, data=dshape)
 # save_debug_str(net_planned, data=dshape)
 

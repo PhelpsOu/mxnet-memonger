@@ -1,29 +1,29 @@
 Symbol Outputs:
 	output[0]=softmax(0)
-	output[1]=conv1_1_mirror_backward(0)
-	output[2]=conv1_1_mirror_backward(1)
-	output[3]=conv1_1_mirror_backward(2)
+	output[1]=conv1_1_backward(0)
+	output[2]=conv1_1_backward(1)
+	output[3]=conv1_1_backward(2)
 	output[4]=conv2_1_backward(1)
 	output[5]=conv2_1_backward(2)
-	output[6]=conv3_1_mirror_backward(1)
-	output[7]=conv3_1_mirror_backward(2)
-	output[8]=conv3_2_mirror_backward(1)
-	output[9]=conv3_2_mirror_backward(2)
+	output[6]=conv3_1_backward(1)
+	output[7]=conv3_1_backward(2)
+	output[8]=conv3_2_backward(1)
+	output[9]=conv3_2_backward(2)
 	output[10]=conv4_1_backward(1)
 	output[11]=conv4_1_backward(2)
-	output[12]=conv4_2_mirror_backward(1)
-	output[13]=conv4_2_mirror_backward(2)
-	output[14]=conv5_1_mirror_backward(1)
-	output[15]=conv5_1_mirror_backward(2)
-	output[16]=conv5_2_mirror_backward(1)
-	output[17]=conv5_2_mirror_backward(2)
-	output[18]=fc6_mirror_backward(1)
-	output[19]=fc6_mirror_backward(2)
-	output[20]=fc7_mirror_backward(1)
-	output[21]=fc7_mirror_backward(2)
-	output[22]=fc8_mirror_backward(1)
-	output[23]=fc8_mirror_backward(2)
-	output[24]=softmax_mirror_backward(1)
+	output[12]=conv4_2_backward(1)
+	output[13]=conv4_2_backward(2)
+	output[14]=conv5_1_backward(1)
+	output[15]=conv5_1_backward(2)
+	output[16]=conv5_2_backward(1)
+	output[17]=conv5_2_backward(2)
+	output[18]=fc6_backward(1)
+	output[19]=fc6_backward(2)
+	output[20]=fc7_backward(1)
+	output[21]=fc7_backward(2)
+	output[22]=fc8_backward(1)
+	output[23]=fc8_backward(2)
+	output[24]=softmax_backward(1)
 Variable:data
 Variable:conv1_1_weight
 Variable:conv1_1_bias
@@ -34,8 +34,7 @@ Inputs:
 	arg[1]=conv1_1_weight(0) version=0
 	arg[2]=conv1_1_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
 	num_filter=64
@@ -45,8 +44,7 @@ Op:Activation, Name=relu1_1
 Inputs:
 	arg[0]=conv1_1(0)
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 --------------------
@@ -54,7 +52,6 @@ Op:Pooling, Name=pool1
 Inputs:
 	arg[0]=relu1_1(0)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=1
 	__profiler_scope__=<unk>:
 	kernel=(2, 2)
@@ -69,7 +66,6 @@ Inputs:
 	arg[1]=conv2_1_weight(0) version=0
 	arg[2]=conv2_1_bias(0) version=0
 Attrs:
-	__force_mirroring__=False
 	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
@@ -80,7 +76,6 @@ Op:Activation, Name=relu2_1
 Inputs:
 	arg[0]=conv2_1(0)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
@@ -89,7 +84,6 @@ Op:Pooling, Name=pool2
 Inputs:
 	arg[0]=relu2_1(0)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=1
 	__profiler_scope__=<unk>:
 	kernel=(2, 2)
@@ -104,8 +98,7 @@ Inputs:
 	arg[1]=conv3_1_weight(0) version=0
 	arg[2]=conv3_1_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
 	num_filter=256
@@ -115,8 +108,7 @@ Op:Activation, Name=relu3_1
 Inputs:
 	arg[0]=conv3_1(0)
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 Variable:conv3_2_weight
@@ -128,8 +120,7 @@ Inputs:
 	arg[1]=conv3_2_weight(0) version=0
 	arg[2]=conv3_2_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
 	num_filter=256
@@ -139,8 +130,7 @@ Op:Activation, Name=relu3_2
 Inputs:
 	arg[0]=conv3_2(0)
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 --------------------
@@ -148,7 +138,6 @@ Op:Pooling, Name=pool3
 Inputs:
 	arg[0]=relu3_2(0)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=1
 	__profiler_scope__=<unk>:
 	kernel=(2, 2)
@@ -163,7 +152,6 @@ Inputs:
 	arg[1]=conv4_1_weight(0) version=0
 	arg[2]=conv4_1_bias(0) version=0
 Attrs:
-	__force_mirroring__=False
 	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
@@ -174,7 +162,6 @@ Op:Activation, Name=relu4_1
 Inputs:
 	arg[0]=conv4_1(0)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
@@ -187,8 +174,7 @@ Inputs:
 	arg[1]=conv4_2_weight(0) version=0
 	arg[2]=conv4_2_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
 	num_filter=512
@@ -198,8 +184,7 @@ Op:Activation, Name=relu4_2
 Inputs:
 	arg[0]=conv4_2(0)
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 --------------------
@@ -207,7 +192,6 @@ Op:Pooling, Name=pool4
 Inputs:
 	arg[0]=relu4_2(0)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=1
 	__profiler_scope__=<unk>:
 	kernel=(2, 2)
@@ -222,8 +206,7 @@ Inputs:
 	arg[1]=conv5_1_weight(0) version=0
 	arg[2]=conv5_1_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
 	num_filter=512
@@ -233,8 +216,7 @@ Op:Activation, Name=relu5_1
 Inputs:
 	arg[0]=conv5_1(0)
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 Variable:conv5_2_weight
@@ -246,8 +228,7 @@ Inputs:
 	arg[1]=conv5_2_weight(0) version=0
 	arg[2]=conv5_2_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
 	num_filter=512
@@ -257,8 +238,7 @@ Op:Activation, Name=relu5_2
 Inputs:
 	arg[0]=conv5_2(0)
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 --------------------
@@ -266,7 +246,6 @@ Op:Pooling, Name=pool5
 Inputs:
 	arg[0]=relu5_2(0)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=1
 	__profiler_scope__=<unk>:
 	kernel=(2, 2)
@@ -277,7 +256,6 @@ Op:Flatten, Name=flatten
 Inputs:
 	arg[0]=pool5(0)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=1
 	__profiler_scope__=<unk>:
 Variable:fc6_weight
@@ -289,8 +267,7 @@ Inputs:
 	arg[1]=fc6_weight(0) version=0
 	arg[2]=fc6_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	num_hidden=4096
 --------------------
@@ -298,8 +275,7 @@ Op:Activation, Name=relu6
 Inputs:
 	arg[0]=fc6(0)
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 --------------------
@@ -307,7 +283,6 @@ Op:Dropout, Name=drop6
 Inputs:
 	arg[0]=relu6(0)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	p=0.5
@@ -320,8 +295,7 @@ Inputs:
 	arg[1]=fc7_weight(0) version=0
 	arg[2]=fc7_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	num_hidden=4096
 --------------------
@@ -329,8 +303,7 @@ Op:Activation, Name=relu7
 Inputs:
 	arg[0]=fc7(0)
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 --------------------
@@ -338,7 +311,6 @@ Op:Dropout, Name=drop7
 Inputs:
 	arg[0]=relu7(0)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	p=0.5
@@ -351,8 +323,7 @@ Inputs:
 	arg[1]=fc8_weight(0) version=0
 	arg[2]=fc8_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	num_hidden=10
 Variable:softmax_label
@@ -362,182 +333,91 @@ Inputs:
 	arg[0]=fc8(0)
 	arg[1]=softmax_label(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=1
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 --------------------
-Op:FullyConnected, Name=fc8_mirror
+Op:_backward_SoftmaxOutput, Name=softmax_backward
 Inputs:
-	arg[0]=drop7(0)
-	arg[1]=fc8_weight(0) version=0
-	arg[2]=fc8_bias(0) version=0
-Attrs:
-	__force_mirroring__=True
-	__profiler_scope__=<unk>:
-	num_hidden=10
---------------------
-Op:SoftmaxOutput, Name=softmax_mirror
-Inputs:
-	arg[0]=fc8_mirror(0)
+	arg[0]=softmax(0)
 	arg[1]=softmax_label(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__profiler_scope__=<unk>:
---------------------
-Op:_backward_SoftmaxOutput, Name=softmax_mirror_backward
-Inputs:
-	arg[0]=softmax_mirror(0)
-	arg[1]=softmax_label(0) version=0
-Attrs:
-	__force_mirroring__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 Control deps:
-	cdep[0]=softmax_mirror
+	cdep[0]=softmax
 --------------------
-Op:_backward_FullyConnected, Name=fc8_mirror_backward
+Op:_backward_FullyConnected, Name=fc8_backward
 Inputs:
-	arg[0]=softmax_mirror_backward(0)
+	arg[0]=softmax_backward(0)
 	arg[1]=drop7(0)
 	arg[2]=fc8_weight(0) version=0
 Attrs:
-	__force_mirroring__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	num_hidden=10
 Control deps:
-	cdep[0]=fc8_mirror
+	cdep[0]=fc8
 --------------------
 Op:_backward_Dropout, Name=drop7_backward
 Inputs:
-	arg[0]=fc8_mirror_backward(0)
+	arg[0]=fc8_backward(0)
 	arg[1]=drop7(1)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	p=0.5
 Control deps:
 	cdep[0]=drop7
 --------------------
-Op:FullyConnected, Name=fc7_mirror
-Inputs:
-	arg[0]=drop6(0)
-	arg[1]=fc7_weight(0) version=0
-	arg[2]=fc7_bias(0) version=0
-Attrs:
-	__force_mirroring__=True
-	__profiler_scope__=<unk>:
-	num_hidden=4096
---------------------
-Op:_FusedOp, Name=Activation__backward_Activation
+Op:_backward_Activation, Name=relu7_backward
 Inputs:
 	arg[0]=drop7_backward(0)
-	arg[1]=fc7_mirror(0)
+	arg[1]=relu7(0)
 Attrs:
-	num_inputs=2
-	num_outputs=1
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=relu7
 --------------------
-Op:_backward_FullyConnected, Name=fc7_mirror_backward
+Op:_backward_FullyConnected, Name=fc7_backward
 Inputs:
-	arg[0]=Activation__backward_Activation(0)
+	arg[0]=relu7_backward(0)
 	arg[1]=drop6(0)
 	arg[2]=fc7_weight(0) version=0
 Attrs:
-	__force_mirroring__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	num_hidden=4096
 Control deps:
-	cdep[0]=fc7_mirror
+	cdep[0]=fc7
 --------------------
 Op:_backward_Dropout, Name=drop6_backward
 Inputs:
-	arg[0]=fc7_mirror_backward(0)
+	arg[0]=fc7_backward(0)
 	arg[1]=drop6(1)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	p=0.5
 Control deps:
 	cdep[0]=drop6
 --------------------
-Op:Convolution, Name=conv4_2_mirror
+Op:_backward_Activation, Name=relu6_backward
 Inputs:
-	arg[0]=relu4_1(0)
-	arg[1]=conv4_2_weight(0) version=0
-	arg[2]=conv4_2_bias(0) version=0
+	arg[0]=drop6_backward(0)
+	arg[1]=relu6(0)
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
-	__profiler_scope__=<unk>:
-	kernel=(3, 3)
-	num_filter=512
-	pad=(1, 1)
---------------------
-Op:Activation, Name=relu4_2_mirror
-Inputs:
-	arg[0]=conv4_2_mirror(0)
-Attrs:
-	__force_mirroring__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
---------------------
-Op:Pooling, Name=pool4_mirror
-Inputs:
-	arg[0]=relu4_2_mirror(0)
-Attrs:
-	__force_mirroring__=True
-	__profiler_scope__=<unk>:
-	kernel=(2, 2)
-	pool_type=max
-	stride=(2, 2)
---------------------
-Op:Convolution, Name=conv5_1_mirror
-Inputs:
-	arg[0]=pool4_mirror(0)
-	arg[1]=conv5_1_weight(0) version=0
-	arg[2]=conv5_1_bias(0) version=0
-Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
-	__profiler_scope__=<unk>:
-	kernel=(3, 3)
-	num_filter=512
-	pad=(1, 1)
---------------------
-Op:Activation, Name=relu5_1_mirror
-Inputs:
-	arg[0]=conv5_1_mirror(0)
-Attrs:
-	__force_mirroring__=True
-	__profiler_scope__=<unk>:
-	act_type=relu
---------------------
-Op:Convolution, Name=conv5_2_mirror
-Inputs:
-	arg[0]=relu5_1_mirror(0)
-	arg[1]=conv5_2_weight(0) version=0
-	arg[2]=conv5_2_bias(0) version=0
-Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
-	__profiler_scope__=<unk>:
-	kernel=(3, 3)
-	num_filter=512
-	pad=(1, 1)
---------------------
-Op:Activation, Name=relu5_2_mirror
-Inputs:
-	arg[0]=conv5_2_mirror(0)
-Attrs:
-	__force_mirroring__=True
-	__profiler_scope__=<unk>:
-	act_type=relu
+Control deps:
+	cdep[0]=relu6
 --------------------
 Op:Pooling, Name=pool5_mirror
 Inputs:
-	arg[0]=relu5_2_mirror(0)
+	arg[0]=relu5_2(0)
 Attrs:
-	__force_mirroring__=True
 	__profiler_scope__=<unk>:
 	kernel=(2, 2)
 	pool_type=max
@@ -547,57 +427,39 @@ Op:Flatten, Name=flatten_mirror
 Inputs:
 	arg[0]=pool5_mirror(0)
 Attrs:
-	__force_mirroring__=True
 	__profiler_scope__=<unk>:
 --------------------
-Op:FullyConnected, Name=fc6_mirror
+Op:_backward_FullyConnected, Name=fc6_backward
 Inputs:
-	arg[0]=flatten_mirror(0)
-	arg[1]=fc6_weight(0) version=0
-	arg[2]=fc6_bias(0) version=0
-Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
-	__profiler_scope__=<unk>:
-	num_hidden=4096
---------------------
-Op:_FusedOp, Name=Activation__backward_Activation
-Inputs:
-	arg[0]=drop6_backward(0)
-	arg[1]=fc6_mirror(0)
-Attrs:
-	num_inputs=2
-	num_outputs=1
---------------------
-Op:_backward_FullyConnected, Name=fc6_mirror_backward
-Inputs:
-	arg[0]=Activation__backward_Activation(0)
+	arg[0]=relu6_backward(0)
 	arg[1]=flatten_mirror(0)
 	arg[2]=fc6_weight(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	num_hidden=4096
 Control deps:
-	cdep[0]=fc6_mirror
+	cdep[0]=fc6
 --------------------
 Op:_backward_copy, Name=flatten_mirror_backward
 Inputs:
-	arg[0]=fc6_mirror_backward(0)
+	arg[0]=fc6_backward(0)
 Attrs:
-	__force_mirroring__=True
 	__profiler_scope__=<unk>:
 Control deps:
 	cdep[0]=flatten_mirror
 --------------------
+Op:_zeros_without_dtype, Name=zeros_without_dtype
+Inputs:
+--------------------
 Op:_backward_Pooling, Name=pool5_mirror_backward
 Inputs:
 	arg[0]=flatten_mirror_backward(0)
-	arg[1]=relu5_2_mirror(0)
-	arg[2]=pool5_mirror(0)
+	arg[1]=zeros_without_dtype(0)
+	arg[2]=relu5_2(0)
+	arg[3]=pool5_mirror(0)
+	arg[4]=pool5_mirror(1)
 Attrs:
-	__force_mirroring__=True
 	__profiler_scope__=<unk>:
 	kernel=(2, 2)
 	pool_type=max
@@ -605,67 +467,78 @@ Attrs:
 Control deps:
 	cdep[0]=pool5_mirror
 --------------------
-Op:_backward_Activation, Name=relu5_2_mirror_backward
+Op:_backward_Activation, Name=relu5_2_backward
 Inputs:
 	arg[0]=pool5_mirror_backward(0)
-	arg[1]=relu5_2_mirror(0)
+	arg[1]=relu5_2(0)
 Attrs:
-	__force_mirroring__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 Control deps:
-	cdep[0]=relu5_2_mirror
+	cdep[0]=relu5_2
 --------------------
-Op:_backward_Convolution, Name=conv5_2_mirror_backward
+Op:_backward_Convolution, Name=conv5_2_backward
 Inputs:
-	arg[0]=relu5_2_mirror_backward(0)
-	arg[1]=relu5_1_mirror(0)
+	arg[0]=relu5_2_backward(0)
+	arg[1]=relu5_1(0)
 	arg[2]=conv5_2_weight(0) version=0
 	arg[3]=conv5_2_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
 	num_filter=512
 	pad=(1, 1)
 Control deps:
-	cdep[0]=conv5_2_mirror
+	cdep[0]=conv5_2
 --------------------
-Op:_backward_Activation, Name=relu5_1_mirror_backward
+Op:_backward_Activation, Name=relu5_1_backward
 Inputs:
-	arg[0]=conv5_2_mirror_backward(0)
-	arg[1]=relu5_1_mirror(0)
+	arg[0]=conv5_2_backward(0)
+	arg[1]=relu5_1(0)
 Attrs:
-	__force_mirroring__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 Control deps:
-	cdep[0]=relu5_1_mirror
+	cdep[0]=relu5_1
 --------------------
-Op:_backward_Convolution, Name=conv5_1_mirror_backward
+Op:Pooling, Name=pool4_mirror
 Inputs:
-	arg[0]=relu5_1_mirror_backward(0)
+	arg[0]=relu4_2(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	kernel=(2, 2)
+	pool_type=max
+	stride=(2, 2)
+--------------------
+Op:_backward_Convolution, Name=conv5_1_backward
+Inputs:
+	arg[0]=relu5_1_backward(0)
 	arg[1]=pool4_mirror(0)
 	arg[2]=conv5_1_weight(0) version=0
 	arg[3]=conv5_1_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
 	num_filter=512
 	pad=(1, 1)
 Control deps:
-	cdep[0]=conv5_1_mirror
+	cdep[0]=conv5_1
+--------------------
+Op:_zeros_without_dtype, Name=zeros_without_dtype
+Inputs:
 --------------------
 Op:_backward_Pooling, Name=pool4_mirror_backward
 Inputs:
-	arg[0]=conv5_1_mirror_backward(0)
-	arg[1]=relu4_2_mirror(0)
-	arg[2]=pool4_mirror(0)
+	arg[0]=conv5_1_backward(0)
+	arg[1]=zeros_without_dtype(0)
+	arg[2]=relu4_2(0)
+	arg[3]=pool4_mirror(0)
+	arg[4]=pool4_mirror(1)
 Attrs:
-	__force_mirroring__=True
 	__profiler_scope__=<unk>:
 	kernel=(2, 2)
 	pool_type=max
@@ -673,102 +546,47 @@ Attrs:
 Control deps:
 	cdep[0]=pool4_mirror
 --------------------
-Op:_backward_Activation, Name=relu4_2_mirror_backward
+Op:_backward_Activation, Name=relu4_2_backward
 Inputs:
 	arg[0]=pool4_mirror_backward(0)
-	arg[1]=relu4_2_mirror(0)
+	arg[1]=relu4_2(0)
 Attrs:
-	__force_mirroring__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 Control deps:
-	cdep[0]=relu4_2_mirror
+	cdep[0]=relu4_2
 --------------------
-Op:_backward_Convolution, Name=conv4_2_mirror_backward
+Op:_backward_Convolution, Name=conv4_2_backward
 Inputs:
-	arg[0]=relu4_2_mirror_backward(0)
+	arg[0]=relu4_2_backward(0)
 	arg[1]=relu4_1(0)
 	arg[2]=conv4_2_weight(0) version=0
 	arg[3]=conv4_2_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
 	num_filter=512
 	pad=(1, 1)
 Control deps:
-	cdep[0]=conv4_2_mirror
+	cdep[0]=conv4_2
 --------------------
 Op:_backward_Activation, Name=relu4_1_backward
 Inputs:
-	arg[0]=conv4_2_mirror_backward(0)
+	arg[0]=conv4_2_backward(0)
 	arg[1]=relu4_1(0)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 Control deps:
 	cdep[0]=relu4_1
 --------------------
-Op:Pooling, Name=pool2_mirror
-Inputs:
-	arg[0]=relu2_1(0)
-Attrs:
-	__force_mirroring__=True
-	__profiler_scope__=<unk>:
-	kernel=(2, 2)
-	pool_type=max
-	stride=(2, 2)
---------------------
-Op:Convolution, Name=conv3_1_mirror
-Inputs:
-	arg[0]=pool2_mirror(0)
-	arg[1]=conv3_1_weight(0) version=0
-	arg[2]=conv3_1_bias(0) version=0
-Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
-	__profiler_scope__=<unk>:
-	kernel=(3, 3)
-	num_filter=256
-	pad=(1, 1)
---------------------
-Op:Activation, Name=relu3_1_mirror
-Inputs:
-	arg[0]=conv3_1_mirror(0)
-Attrs:
-	__force_mirroring__=True
-	__profiler_scope__=<unk>:
-	act_type=relu
---------------------
-Op:Convolution, Name=conv3_2_mirror
-Inputs:
-	arg[0]=relu3_1_mirror(0)
-	arg[1]=conv3_2_weight(0) version=0
-	arg[2]=conv3_2_bias(0) version=0
-Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
-	__profiler_scope__=<unk>:
-	kernel=(3, 3)
-	num_filter=256
-	pad=(1, 1)
---------------------
-Op:Activation, Name=relu3_2_mirror
-Inputs:
-	arg[0]=conv3_2_mirror(0)
-Attrs:
-	__force_mirroring__=True
-	__profiler_scope__=<unk>:
-	act_type=relu
---------------------
 Op:Pooling, Name=pool3_mirror
 Inputs:
-	arg[0]=relu3_2_mirror(0)
+	arg[0]=relu3_2(0)
 Attrs:
-	__force_mirroring__=True
 	__profiler_scope__=<unk>:
 	kernel=(2, 2)
 	pool_type=max
@@ -781,7 +599,6 @@ Inputs:
 	arg[2]=conv4_1_weight(0) version=0
 	arg[3]=conv4_1_bias(0) version=0
 Attrs:
-	__force_mirroring__=False
 	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
@@ -790,13 +607,17 @@ Attrs:
 Control deps:
 	cdep[0]=conv4_1
 --------------------
+Op:_zeros_without_dtype, Name=zeros_without_dtype
+Inputs:
+--------------------
 Op:_backward_Pooling, Name=pool3_mirror_backward
 Inputs:
 	arg[0]=conv4_1_backward(0)
-	arg[1]=relu3_2_mirror(0)
-	arg[2]=pool3_mirror(0)
+	arg[1]=zeros_without_dtype(0)
+	arg[2]=relu3_2(0)
+	arg[3]=pool3_mirror(0)
+	arg[4]=pool3_mirror(1)
 Attrs:
-	__force_mirroring__=True
 	__profiler_scope__=<unk>:
 	kernel=(2, 2)
 	pool_type=max
@@ -804,67 +625,78 @@ Attrs:
 Control deps:
 	cdep[0]=pool3_mirror
 --------------------
-Op:_backward_Activation, Name=relu3_2_mirror_backward
+Op:_backward_Activation, Name=relu3_2_backward
 Inputs:
 	arg[0]=pool3_mirror_backward(0)
-	arg[1]=relu3_2_mirror(0)
+	arg[1]=relu3_2(0)
 Attrs:
-	__force_mirroring__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 Control deps:
-	cdep[0]=relu3_2_mirror
+	cdep[0]=relu3_2
 --------------------
-Op:_backward_Convolution, Name=conv3_2_mirror_backward
+Op:_backward_Convolution, Name=conv3_2_backward
 Inputs:
-	arg[0]=relu3_2_mirror_backward(0)
-	arg[1]=relu3_1_mirror(0)
+	arg[0]=relu3_2_backward(0)
+	arg[1]=relu3_1(0)
 	arg[2]=conv3_2_weight(0) version=0
 	arg[3]=conv3_2_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
 	num_filter=256
 	pad=(1, 1)
 Control deps:
-	cdep[0]=conv3_2_mirror
+	cdep[0]=conv3_2
 --------------------
-Op:_backward_Activation, Name=relu3_1_mirror_backward
+Op:_backward_Activation, Name=relu3_1_backward
 Inputs:
-	arg[0]=conv3_2_mirror_backward(0)
-	arg[1]=relu3_1_mirror(0)
+	arg[0]=conv3_2_backward(0)
+	arg[1]=relu3_1(0)
 Attrs:
-	__force_mirroring__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 Control deps:
-	cdep[0]=relu3_1_mirror
+	cdep[0]=relu3_1
 --------------------
-Op:_backward_Convolution, Name=conv3_1_mirror_backward
+Op:Pooling, Name=pool2_mirror
 Inputs:
-	arg[0]=relu3_1_mirror_backward(0)
+	arg[0]=relu2_1(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	kernel=(2, 2)
+	pool_type=max
+	stride=(2, 2)
+--------------------
+Op:_backward_Convolution, Name=conv3_1_backward
+Inputs:
+	arg[0]=relu3_1_backward(0)
 	arg[1]=pool2_mirror(0)
 	arg[2]=conv3_1_weight(0) version=0
 	arg[3]=conv3_1_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
 	num_filter=256
 	pad=(1, 1)
 Control deps:
-	cdep[0]=conv3_1_mirror
+	cdep[0]=conv3_1
+--------------------
+Op:_zeros_without_dtype, Name=zeros_without_dtype
+Inputs:
 --------------------
 Op:_backward_Pooling, Name=pool2_mirror_backward
 Inputs:
-	arg[0]=conv3_1_mirror_backward(0)
-	arg[1]=relu2_1(0)
-	arg[2]=pool2_mirror(0)
+	arg[0]=conv3_1_backward(0)
+	arg[1]=zeros_without_dtype(0)
+	arg[2]=relu2_1(0)
+	arg[3]=pool2_mirror(0)
+	arg[4]=pool2_mirror(1)
 Attrs:
-	__force_mirroring__=True
 	__profiler_scope__=<unk>:
 	kernel=(2, 2)
 	pool_type=max
@@ -877,39 +709,16 @@ Inputs:
 	arg[0]=pool2_mirror_backward(0)
 	arg[1]=relu2_1(0)
 Attrs:
-	__force_mirroring__=True
 	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 Control deps:
 	cdep[0]=relu2_1
 --------------------
-Op:Convolution, Name=conv1_1_mirror
-Inputs:
-	arg[0]=data(0) version=0
-	arg[1]=conv1_1_weight(0) version=0
-	arg[2]=conv1_1_bias(0) version=0
-Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
-	__profiler_scope__=<unk>:
-	kernel=(3, 3)
-	num_filter=64
-	pad=(1, 1)
---------------------
-Op:Activation, Name=relu1_1_mirror
-Inputs:
-	arg[0]=conv1_1_mirror(0)
-Attrs:
-	__force_mirroring__=True
-	__profiler_scope__=<unk>:
-	act_type=relu
---------------------
 Op:Pooling, Name=pool1_mirror
 Inputs:
-	arg[0]=relu1_1_mirror(0)
+	arg[0]=relu1_1(0)
 Attrs:
-	__force_mirroring__=True
 	__profiler_scope__=<unk>:
 	kernel=(2, 2)
 	pool_type=max
@@ -922,7 +731,6 @@ Inputs:
 	arg[2]=conv2_1_weight(0) version=0
 	arg[3]=conv2_1_bias(0) version=0
 Attrs:
-	__force_mirroring__=False
 	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
@@ -931,13 +739,17 @@ Attrs:
 Control deps:
 	cdep[0]=conv2_1
 --------------------
+Op:_zeros_without_dtype, Name=zeros_without_dtype
+Inputs:
+--------------------
 Op:_backward_Pooling, Name=pool1_mirror_backward
 Inputs:
 	arg[0]=conv2_1_backward(0)
-	arg[1]=relu1_1_mirror(0)
-	arg[2]=pool1_mirror(0)
+	arg[1]=zeros_without_dtype(0)
+	arg[2]=relu1_1(0)
+	arg[3]=pool1_mirror(0)
+	arg[4]=pool1_mirror(1)
 Attrs:
-	__force_mirroring__=True
 	__profiler_scope__=<unk>:
 	kernel=(2, 2)
 	pool_type=max
@@ -945,31 +757,30 @@ Attrs:
 Control deps:
 	cdep[0]=pool1_mirror
 --------------------
-Op:_backward_Activation, Name=relu1_1_mirror_backward
+Op:_backward_Activation, Name=relu1_1_backward
 Inputs:
 	arg[0]=pool1_mirror_backward(0)
-	arg[1]=relu1_1_mirror(0)
+	arg[1]=relu1_1(0)
 Attrs:
-	__force_mirroring__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	act_type=relu
 Control deps:
-	cdep[0]=relu1_1_mirror
+	cdep[0]=relu1_1
 --------------------
-Op:_backward_Convolution, Name=conv1_1_mirror_backward
+Op:_backward_Convolution, Name=conv1_1_backward
 Inputs:
-	arg[0]=relu1_1_mirror_backward(0)
+	arg[0]=relu1_1_backward(0)
 	arg[1]=data(0) version=0
 	arg[2]=conv1_1_weight(0) version=0
 	arg[3]=conv1_1_bias(0) version=0
 Attrs:
-	__force_mirroring__=True
-	__mirror_stage__=True
+	__mirror_stage__=0
 	__profiler_scope__=<unk>:
 	kernel=(3, 3)
 	num_filter=64
 	pad=(1, 1)
 Control deps:
-	cdep[0]=conv1_1_mirror
-Total 1416 MB allocated
+	cdep[0]=conv1_1
+Total 1993 MB allocated
 Total 11 TempSpace resource requested

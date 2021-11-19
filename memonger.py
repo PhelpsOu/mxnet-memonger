@@ -1,7 +1,7 @@
 import mxnet as mx
 import math
 
-debug = True
+debug = False
 
 def prod(shape):
     """Get product of the shape.
@@ -160,7 +160,7 @@ def search_plan(sym, ntrial=5, type_dict=None, **kwargs):
         local_size = info['max_size'] >> 20
         # save_size为所有checkpoint加起来的大小，max_size为最大Block的大小
         # save_size越大，说明ckpt越多，单个Block就越小，local_size(max_size)就越小，二者成反比
-        # 我们的目标是让save——size和local_size都尽量小，用guess来衡量
+        # 我们的目标是让save_size和local_size都尽量小，用guess来衡量
         guess = int(math.sqrt(save_size * local_size / 2))
         if min_cost is None or min_cost > cost:
             min_cost = cost

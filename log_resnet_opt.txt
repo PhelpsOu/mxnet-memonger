@@ -1,0 +1,6004 @@
+Symbol Outputs:
+	output[0]=softmax(0)
+	output[1]=id_backward(0)
+	output[2]=bn_data_mirror_backward(1)
+	output[3]=bn_data_mirror_backward(2)
+	output[4]=conv0_backward(1)
+	output[5]=bn0_mirror_backward(1)
+	output[6]=bn0_mirror_backward(2)
+	output[7]=stage1_unit1_bn1_mirror_backward(1)
+	output[8]=stage1_unit1_bn1_mirror_backward(2)
+	output[9]=stage1_unit1_conv1_backward(1)
+	output[10]=stage1_unit1_bn2_mirror_backward(1)
+	output[11]=stage1_unit1_bn2_mirror_backward(2)
+	output[12]=stage1_unit1_conv2_backward(1)
+	output[13]=stage1_unit1_bn3_mirror_backward(1)
+	output[14]=stage1_unit1_bn3_mirror_backward(2)
+	output[15]=stage1_unit1_conv3_backward(1)
+	output[16]=stage1_unit1_sc_backward(1)
+	output[17]=stage1_unit2_bn1_mirror_backward(1)
+	output[18]=stage1_unit2_bn1_mirror_backward(2)
+	output[19]=stage1_unit2_conv1_backward(1)
+	output[20]=stage1_unit2_bn2_mirror_backward(1)
+	output[21]=stage1_unit2_bn2_mirror_backward(2)
+	output[22]=stage1_unit2_conv2_backward(1)
+	output[23]=stage1_unit2_bn3_mirror_backward(1)
+	output[24]=stage1_unit2_bn3_mirror_backward(2)
+	output[25]=stage1_unit2_conv3_backward(1)
+	output[26]=stage1_unit3_bn1_mirror_backward(1)
+	output[27]=stage1_unit3_bn1_mirror_backward(2)
+	output[28]=stage1_unit3_conv1_backward(1)
+	output[29]=stage1_unit3_bn2_mirror_backward(1)
+	output[30]=stage1_unit3_bn2_mirror_backward(2)
+	output[31]=stage1_unit3_conv2_backward(1)
+	output[32]=stage1_unit3_bn3_mirror_backward(1)
+	output[33]=stage1_unit3_bn3_mirror_backward(2)
+	output[34]=stage1_unit3_conv3_backward(1)
+	output[35]=stage2_unit1_bn1_mirror_backward(1)
+	output[36]=stage2_unit1_bn1_mirror_backward(2)
+	output[37]=stage2_unit1_conv1_backward(1)
+	output[38]=stage2_unit1_bn2_mirror_backward(1)
+	output[39]=stage2_unit1_bn2_mirror_backward(2)
+	output[40]=stage2_unit1_conv2_backward(1)
+	output[41]=stage2_unit1_bn3_mirror_backward(1)
+	output[42]=stage2_unit1_bn3_mirror_backward(2)
+	output[43]=stage2_unit1_conv3_backward(1)
+	output[44]=stage2_unit1_sc_backward(1)
+	output[45]=stage2_unit2_bn1_mirror_backward(1)
+	output[46]=stage2_unit2_bn1_mirror_backward(2)
+	output[47]=stage2_unit2_conv1_backward(1)
+	output[48]=stage2_unit2_bn2_mirror_backward(1)
+	output[49]=stage2_unit2_bn2_mirror_backward(2)
+	output[50]=stage2_unit2_conv2_backward(1)
+	output[51]=stage2_unit2_bn3_mirror_backward(1)
+	output[52]=stage2_unit2_bn3_mirror_backward(2)
+	output[53]=stage2_unit2_conv3_backward(1)
+	output[54]=stage2_unit3_bn1_mirror_backward(1)
+	output[55]=stage2_unit3_bn1_mirror_backward(2)
+	output[56]=stage2_unit3_conv1_backward(1)
+	output[57]=stage2_unit3_bn2_mirror_backward(1)
+	output[58]=stage2_unit3_bn2_mirror_backward(2)
+	output[59]=stage2_unit3_conv2_backward(1)
+	output[60]=stage2_unit3_bn3_mirror_backward(1)
+	output[61]=stage2_unit3_bn3_mirror_backward(2)
+	output[62]=stage2_unit3_conv3_backward(1)
+	output[63]=stage2_unit4_bn1_mirror_backward(1)
+	output[64]=stage2_unit4_bn1_mirror_backward(2)
+	output[65]=stage2_unit4_conv1_backward(1)
+	output[66]=stage2_unit4_bn2_mirror_backward(1)
+	output[67]=stage2_unit4_bn2_mirror_backward(2)
+	output[68]=stage2_unit4_conv2_backward(1)
+	output[69]=stage2_unit4_bn3_mirror_backward(1)
+	output[70]=stage2_unit4_bn3_mirror_backward(2)
+	output[71]=stage2_unit4_conv3_backward(1)
+	output[72]=stage3_unit1_bn1_mirror_backward(1)
+	output[73]=stage3_unit1_bn1_mirror_backward(2)
+	output[74]=stage3_unit1_conv1_backward(1)
+	output[75]=stage3_unit1_bn2_mirror_backward(1)
+	output[76]=stage3_unit1_bn2_mirror_backward(2)
+	output[77]=stage3_unit1_conv2_backward(1)
+	output[78]=stage3_unit1_bn3_mirror_backward(1)
+	output[79]=stage3_unit1_bn3_mirror_backward(2)
+	output[80]=stage3_unit1_conv3_backward(1)
+	output[81]=stage3_unit1_sc_backward(1)
+	output[82]=stage3_unit2_bn1_mirror_backward(1)
+	output[83]=stage3_unit2_bn1_mirror_backward(2)
+	output[84]=stage3_unit2_conv1_backward(1)
+	output[85]=stage3_unit2_bn2_mirror_backward(1)
+	output[86]=stage3_unit2_bn2_mirror_backward(2)
+	output[87]=stage3_unit2_conv2_backward(1)
+	output[88]=stage3_unit2_bn3_mirror_backward(1)
+	output[89]=stage3_unit2_bn3_mirror_backward(2)
+	output[90]=stage3_unit2_conv3_backward(1)
+	output[91]=stage3_unit3_bn1_mirror_backward(1)
+	output[92]=stage3_unit3_bn1_mirror_backward(2)
+	output[93]=stage3_unit3_conv1_backward(1)
+	output[94]=stage3_unit3_bn2_mirror_backward(1)
+	output[95]=stage3_unit3_bn2_mirror_backward(2)
+	output[96]=stage3_unit3_conv2_backward(1)
+	output[97]=stage3_unit3_bn3_mirror_backward(1)
+	output[98]=stage3_unit3_bn3_mirror_backward(2)
+	output[99]=stage3_unit3_conv3_backward(1)
+	output[100]=stage3_unit4_bn1_mirror_backward(1)
+	output[101]=stage3_unit4_bn1_mirror_backward(2)
+	output[102]=stage3_unit4_conv1_backward(1)
+	output[103]=stage3_unit4_bn2_mirror_backward(1)
+	output[104]=stage3_unit4_bn2_mirror_backward(2)
+	output[105]=stage3_unit4_conv2_backward(1)
+	output[106]=stage3_unit4_bn3_mirror_backward(1)
+	output[107]=stage3_unit4_bn3_mirror_backward(2)
+	output[108]=stage3_unit4_conv3_backward(1)
+	output[109]=stage3_unit5_bn1_mirror_backward(1)
+	output[110]=stage3_unit5_bn1_mirror_backward(2)
+	output[111]=stage3_unit5_conv1_backward(1)
+	output[112]=stage3_unit5_bn2_mirror_backward(1)
+	output[113]=stage3_unit5_bn2_mirror_backward(2)
+	output[114]=stage3_unit5_conv2_backward(1)
+	output[115]=stage3_unit5_bn3_mirror_backward(1)
+	output[116]=stage3_unit5_bn3_mirror_backward(2)
+	output[117]=stage3_unit5_conv3_backward(1)
+	output[118]=stage3_unit6_bn1_mirror_backward(1)
+	output[119]=stage3_unit6_bn1_mirror_backward(2)
+	output[120]=stage3_unit6_conv1_backward(1)
+	output[121]=stage3_unit6_bn2_mirror_backward(1)
+	output[122]=stage3_unit6_bn2_mirror_backward(2)
+	output[123]=stage3_unit6_conv2_backward(1)
+	output[124]=stage3_unit6_bn3_mirror_backward(1)
+	output[125]=stage3_unit6_bn3_mirror_backward(2)
+	output[126]=stage3_unit6_conv3_backward(1)
+	output[127]=stage4_unit1_bn1_mirror_backward(1)
+	output[128]=stage4_unit1_bn1_mirror_backward(2)
+	output[129]=stage4_unit1_conv1_backward(1)
+	output[130]=stage4_unit1_bn2_mirror_backward(1)
+	output[131]=stage4_unit1_bn2_mirror_backward(2)
+	output[132]=stage4_unit1_conv2_backward(1)
+	output[133]=stage4_unit1_bn3_mirror_backward(1)
+	output[134]=stage4_unit1_bn3_mirror_backward(2)
+	output[135]=stage4_unit1_conv3_backward(1)
+	output[136]=stage4_unit1_sc_backward(1)
+	output[137]=stage4_unit2_bn1_mirror_backward(1)
+	output[138]=stage4_unit2_bn1_mirror_backward(2)
+	output[139]=stage4_unit2_conv1_backward(1)
+	output[140]=stage4_unit2_bn2_mirror_backward(1)
+	output[141]=stage4_unit2_bn2_mirror_backward(2)
+	output[142]=stage4_unit2_conv2_backward(1)
+	output[143]=stage4_unit2_bn3_mirror_backward(1)
+	output[144]=stage4_unit2_bn3_mirror_backward(2)
+	output[145]=stage4_unit2_conv3_backward(1)
+	output[146]=stage4_unit3_bn1_mirror_backward(1)
+	output[147]=stage4_unit3_bn1_mirror_backward(2)
+	output[148]=stage4_unit3_conv1_backward(1)
+	output[149]=stage4_unit3_bn2_mirror_backward(1)
+	output[150]=stage4_unit3_bn2_mirror_backward(2)
+	output[151]=stage4_unit3_conv2_backward(1)
+	output[152]=stage4_unit3_bn3_mirror_backward(1)
+	output[153]=stage4_unit3_bn3_mirror_backward(2)
+	output[154]=stage4_unit3_conv3_backward(1)
+	output[155]=bn1_mirror_backward(1)
+	output[156]=bn1_mirror_backward(2)
+	output[157]=fc1_backward(1)
+	output[158]=fc1_backward(2)
+	output[159]=softmax_backward(1)
+Variable:data
+--------------------
+Op:_copy, Name=id
+Inputs:
+	arg[0]=data(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+Variable:bn_data_gamma
+Variable:bn_data_beta
+Variable:bn_data_moving_mean
+Variable:bn_data_moving_var
+--------------------
+Op:BatchNorm, Name=bn_data
+Inputs:
+	arg[0]=id(0)
+	arg[1]=bn_data_gamma(0) version=0
+	arg[2]=bn_data_beta(0) version=0
+	arg[3]=bn_data_moving_mean(0) version=1
+	arg[4]=bn_data_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=True
+	momentum=0.9
+Variable:conv0_weight
+--------------------
+Op:Convolution, Name=conv0
+Inputs:
+	arg[0]=bn_data(0)
+	arg[1]=conv0_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(7, 7)
+	no_bias=True
+	num_filter=64
+	pad=(3, 3)
+	stride=(2, 2)
+	workspace=256
+Variable:bn0_gamma
+Variable:bn0_beta
+Variable:bn0_moving_mean
+Variable:bn0_moving_var
+--------------------
+Op:BatchNorm, Name=bn0
+Inputs:
+	arg[0]=conv0(0)
+	arg[1]=bn0_gamma(0) version=0
+	arg[2]=bn0_beta(0) version=0
+	arg[3]=bn0_moving_mean(0) version=1
+	arg[4]=bn0_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=relu0
+Inputs:
+	arg[0]=bn0(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:Pooling, Name=pooling0
+Inputs:
+	arg[0]=relu0(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	pad=(1, 1)
+	pool_type=max
+	stride=(2, 2)
+Variable:stage1_unit1_bn1_gamma
+Variable:stage1_unit1_bn1_beta
+Variable:stage1_unit1_bn1_moving_mean
+Variable:stage1_unit1_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage1_unit1_bn1
+Inputs:
+	arg[0]=pooling0(0)
+	arg[1]=stage1_unit1_bn1_gamma(0) version=0
+	arg[2]=stage1_unit1_bn1_beta(0) version=0
+	arg[3]=stage1_unit1_bn1_moving_mean(0) version=1
+	arg[4]=stage1_unit1_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit1_relu1
+Inputs:
+	arg[0]=stage1_unit1_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage1_unit1_conv1_weight
+--------------------
+Op:Convolution, Name=stage1_unit1_conv1
+Inputs:
+	arg[0]=stage1_unit1_relu1(0)
+	arg[1]=stage1_unit1_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=64
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage1_unit1_bn2_gamma
+Variable:stage1_unit1_bn2_beta
+Variable:stage1_unit1_bn2_moving_mean
+Variable:stage1_unit1_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage1_unit1_bn2
+Inputs:
+	arg[0]=stage1_unit1_conv1(0)
+	arg[1]=stage1_unit1_bn2_gamma(0) version=0
+	arg[2]=stage1_unit1_bn2_beta(0) version=0
+	arg[3]=stage1_unit1_bn2_moving_mean(0) version=1
+	arg[4]=stage1_unit1_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit1_relu2
+Inputs:
+	arg[0]=stage1_unit1_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage1_unit1_conv2_weight
+--------------------
+Op:Convolution, Name=stage1_unit1_conv2
+Inputs:
+	arg[0]=stage1_unit1_relu2(0)
+	arg[1]=stage1_unit1_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=64
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Variable:stage1_unit1_bn3_gamma
+Variable:stage1_unit1_bn3_beta
+Variable:stage1_unit1_bn3_moving_mean
+Variable:stage1_unit1_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage1_unit1_bn3
+Inputs:
+	arg[0]=stage1_unit1_conv2(0)
+	arg[1]=stage1_unit1_bn3_gamma(0) version=0
+	arg[2]=stage1_unit1_bn3_beta(0) version=0
+	arg[3]=stage1_unit1_bn3_moving_mean(0) version=1
+	arg[4]=stage1_unit1_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit1_relu3
+Inputs:
+	arg[0]=stage1_unit1_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage1_unit1_conv3_weight
+--------------------
+Op:Convolution, Name=stage1_unit1_conv3
+Inputs:
+	arg[0]=stage1_unit1_relu3(0)
+	arg[1]=stage1_unit1_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage1_unit1_sc_weight
+--------------------
+Op:Convolution, Name=stage1_unit1_sc
+Inputs:
+	arg[0]=stage1_unit1_relu1(0)
+	arg[1]=stage1_unit1_sc_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	stride=(1, 1)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus0
+Inputs:
+	arg[0]=stage1_unit1_conv3(0)
+	arg[1]=stage1_unit1_sc(0)
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+Variable:stage1_unit2_bn1_gamma
+Variable:stage1_unit2_bn1_beta
+Variable:stage1_unit2_bn1_moving_mean
+Variable:stage1_unit2_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage1_unit2_bn1
+Inputs:
+	arg[0]=_plus0(0)
+	arg[1]=stage1_unit2_bn1_gamma(0) version=0
+	arg[2]=stage1_unit2_bn1_beta(0) version=0
+	arg[3]=stage1_unit2_bn1_moving_mean(0) version=1
+	arg[4]=stage1_unit2_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit2_relu1
+Inputs:
+	arg[0]=stage1_unit2_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage1_unit2_conv1_weight
+--------------------
+Op:Convolution, Name=stage1_unit2_conv1
+Inputs:
+	arg[0]=stage1_unit2_relu1(0)
+	arg[1]=stage1_unit2_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=64
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage1_unit2_bn2_gamma
+Variable:stage1_unit2_bn2_beta
+Variable:stage1_unit2_bn2_moving_mean
+Variable:stage1_unit2_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage1_unit2_bn2
+Inputs:
+	arg[0]=stage1_unit2_conv1(0)
+	arg[1]=stage1_unit2_bn2_gamma(0) version=0
+	arg[2]=stage1_unit2_bn2_beta(0) version=0
+	arg[3]=stage1_unit2_bn2_moving_mean(0) version=1
+	arg[4]=stage1_unit2_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit2_relu2
+Inputs:
+	arg[0]=stage1_unit2_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage1_unit2_conv2_weight
+--------------------
+Op:Convolution, Name=stage1_unit2_conv2
+Inputs:
+	arg[0]=stage1_unit2_relu2(0)
+	arg[1]=stage1_unit2_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=64
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Variable:stage1_unit2_bn3_gamma
+Variable:stage1_unit2_bn3_beta
+Variable:stage1_unit2_bn3_moving_mean
+Variable:stage1_unit2_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage1_unit2_bn3
+Inputs:
+	arg[0]=stage1_unit2_conv2(0)
+	arg[1]=stage1_unit2_bn3_gamma(0) version=0
+	arg[2]=stage1_unit2_bn3_beta(0) version=0
+	arg[3]=stage1_unit2_bn3_moving_mean(0) version=1
+	arg[4]=stage1_unit2_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit2_relu3
+Inputs:
+	arg[0]=stage1_unit2_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage1_unit2_conv3_weight
+--------------------
+Op:Convolution, Name=stage1_unit2_conv3
+Inputs:
+	arg[0]=stage1_unit2_relu3(0)
+	arg[1]=stage1_unit2_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus1
+Inputs:
+	arg[0]=stage1_unit2_conv3(0)
+	arg[1]=_plus0(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+Variable:stage1_unit3_bn1_gamma
+Variable:stage1_unit3_bn1_beta
+Variable:stage1_unit3_bn1_moving_mean
+Variable:stage1_unit3_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage1_unit3_bn1
+Inputs:
+	arg[0]=_plus1(0)
+	arg[1]=stage1_unit3_bn1_gamma(0) version=0
+	arg[2]=stage1_unit3_bn1_beta(0) version=0
+	arg[3]=stage1_unit3_bn1_moving_mean(0) version=1
+	arg[4]=stage1_unit3_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit3_relu1
+Inputs:
+	arg[0]=stage1_unit3_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage1_unit3_conv1_weight
+--------------------
+Op:Convolution, Name=stage1_unit3_conv1
+Inputs:
+	arg[0]=stage1_unit3_relu1(0)
+	arg[1]=stage1_unit3_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=64
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage1_unit3_bn2_gamma
+Variable:stage1_unit3_bn2_beta
+Variable:stage1_unit3_bn2_moving_mean
+Variable:stage1_unit3_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage1_unit3_bn2
+Inputs:
+	arg[0]=stage1_unit3_conv1(0)
+	arg[1]=stage1_unit3_bn2_gamma(0) version=0
+	arg[2]=stage1_unit3_bn2_beta(0) version=0
+	arg[3]=stage1_unit3_bn2_moving_mean(0) version=1
+	arg[4]=stage1_unit3_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit3_relu2
+Inputs:
+	arg[0]=stage1_unit3_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage1_unit3_conv2_weight
+--------------------
+Op:Convolution, Name=stage1_unit3_conv2
+Inputs:
+	arg[0]=stage1_unit3_relu2(0)
+	arg[1]=stage1_unit3_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=64
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Variable:stage1_unit3_bn3_gamma
+Variable:stage1_unit3_bn3_beta
+Variable:stage1_unit3_bn3_moving_mean
+Variable:stage1_unit3_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage1_unit3_bn3
+Inputs:
+	arg[0]=stage1_unit3_conv2(0)
+	arg[1]=stage1_unit3_bn3_gamma(0) version=0
+	arg[2]=stage1_unit3_bn3_beta(0) version=0
+	arg[3]=stage1_unit3_bn3_moving_mean(0) version=1
+	arg[4]=stage1_unit3_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit3_relu3
+Inputs:
+	arg[0]=stage1_unit3_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage1_unit3_conv3_weight
+--------------------
+Op:Convolution, Name=stage1_unit3_conv3
+Inputs:
+	arg[0]=stage1_unit3_relu3(0)
+	arg[1]=stage1_unit3_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus2
+Inputs:
+	arg[0]=stage1_unit3_conv3(0)
+	arg[1]=_plus1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+Variable:stage2_unit1_bn1_gamma
+Variable:stage2_unit1_bn1_beta
+Variable:stage2_unit1_bn1_moving_mean
+Variable:stage2_unit1_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage2_unit1_bn1
+Inputs:
+	arg[0]=_plus2(0)
+	arg[1]=stage2_unit1_bn1_gamma(0) version=0
+	arg[2]=stage2_unit1_bn1_beta(0) version=0
+	arg[3]=stage2_unit1_bn1_moving_mean(0) version=1
+	arg[4]=stage2_unit1_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit1_relu1
+Inputs:
+	arg[0]=stage2_unit1_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage2_unit1_conv1_weight
+--------------------
+Op:Convolution, Name=stage2_unit1_conv1
+Inputs:
+	arg[0]=stage2_unit1_relu1(0)
+	arg[1]=stage2_unit1_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=128
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage2_unit1_bn2_gamma
+Variable:stage2_unit1_bn2_beta
+Variable:stage2_unit1_bn2_moving_mean
+Variable:stage2_unit1_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage2_unit1_bn2
+Inputs:
+	arg[0]=stage2_unit1_conv1(0)
+	arg[1]=stage2_unit1_bn2_gamma(0) version=0
+	arg[2]=stage2_unit1_bn2_beta(0) version=0
+	arg[3]=stage2_unit1_bn2_moving_mean(0) version=1
+	arg[4]=stage2_unit1_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit1_relu2
+Inputs:
+	arg[0]=stage2_unit1_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage2_unit1_conv2_weight
+--------------------
+Op:Convolution, Name=stage2_unit1_conv2
+Inputs:
+	arg[0]=stage2_unit1_relu2(0)
+	arg[1]=stage2_unit1_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=128
+	pad=(1, 1)
+	stride=(2, 2)
+	workspace=256
+Variable:stage2_unit1_bn3_gamma
+Variable:stage2_unit1_bn3_beta
+Variable:stage2_unit1_bn3_moving_mean
+Variable:stage2_unit1_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage2_unit1_bn3
+Inputs:
+	arg[0]=stage2_unit1_conv2(0)
+	arg[1]=stage2_unit1_bn3_gamma(0) version=0
+	arg[2]=stage2_unit1_bn3_beta(0) version=0
+	arg[3]=stage2_unit1_bn3_moving_mean(0) version=1
+	arg[4]=stage2_unit1_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit1_relu3
+Inputs:
+	arg[0]=stage2_unit1_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage2_unit1_conv3_weight
+--------------------
+Op:Convolution, Name=stage2_unit1_conv3
+Inputs:
+	arg[0]=stage2_unit1_relu3(0)
+	arg[1]=stage2_unit1_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage2_unit1_sc_weight
+--------------------
+Op:Convolution, Name=stage2_unit1_sc
+Inputs:
+	arg[0]=stage2_unit1_relu1(0)
+	arg[1]=stage2_unit1_sc_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	stride=(2, 2)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus3
+Inputs:
+	arg[0]=stage2_unit1_conv3(0)
+	arg[1]=stage2_unit1_sc(0)
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+Variable:stage2_unit2_bn1_gamma
+Variable:stage2_unit2_bn1_beta
+Variable:stage2_unit2_bn1_moving_mean
+Variable:stage2_unit2_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage2_unit2_bn1
+Inputs:
+	arg[0]=_plus3(0)
+	arg[1]=stage2_unit2_bn1_gamma(0) version=0
+	arg[2]=stage2_unit2_bn1_beta(0) version=0
+	arg[3]=stage2_unit2_bn1_moving_mean(0) version=1
+	arg[4]=stage2_unit2_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit2_relu1
+Inputs:
+	arg[0]=stage2_unit2_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage2_unit2_conv1_weight
+--------------------
+Op:Convolution, Name=stage2_unit2_conv1
+Inputs:
+	arg[0]=stage2_unit2_relu1(0)
+	arg[1]=stage2_unit2_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=128
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage2_unit2_bn2_gamma
+Variable:stage2_unit2_bn2_beta
+Variable:stage2_unit2_bn2_moving_mean
+Variable:stage2_unit2_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage2_unit2_bn2
+Inputs:
+	arg[0]=stage2_unit2_conv1(0)
+	arg[1]=stage2_unit2_bn2_gamma(0) version=0
+	arg[2]=stage2_unit2_bn2_beta(0) version=0
+	arg[3]=stage2_unit2_bn2_moving_mean(0) version=1
+	arg[4]=stage2_unit2_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit2_relu2
+Inputs:
+	arg[0]=stage2_unit2_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage2_unit2_conv2_weight
+--------------------
+Op:Convolution, Name=stage2_unit2_conv2
+Inputs:
+	arg[0]=stage2_unit2_relu2(0)
+	arg[1]=stage2_unit2_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=128
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Variable:stage2_unit2_bn3_gamma
+Variable:stage2_unit2_bn3_beta
+Variable:stage2_unit2_bn3_moving_mean
+Variable:stage2_unit2_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage2_unit2_bn3
+Inputs:
+	arg[0]=stage2_unit2_conv2(0)
+	arg[1]=stage2_unit2_bn3_gamma(0) version=0
+	arg[2]=stage2_unit2_bn3_beta(0) version=0
+	arg[3]=stage2_unit2_bn3_moving_mean(0) version=1
+	arg[4]=stage2_unit2_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit2_relu3
+Inputs:
+	arg[0]=stage2_unit2_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage2_unit2_conv3_weight
+--------------------
+Op:Convolution, Name=stage2_unit2_conv3
+Inputs:
+	arg[0]=stage2_unit2_relu3(0)
+	arg[1]=stage2_unit2_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus4
+Inputs:
+	arg[0]=stage2_unit2_conv3(0)
+	arg[1]=_plus3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+Variable:stage2_unit3_bn1_gamma
+Variable:stage2_unit3_bn1_beta
+Variable:stage2_unit3_bn1_moving_mean
+Variable:stage2_unit3_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage2_unit3_bn1
+Inputs:
+	arg[0]=_plus4(0)
+	arg[1]=stage2_unit3_bn1_gamma(0) version=0
+	arg[2]=stage2_unit3_bn1_beta(0) version=0
+	arg[3]=stage2_unit3_bn1_moving_mean(0) version=1
+	arg[4]=stage2_unit3_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit3_relu1
+Inputs:
+	arg[0]=stage2_unit3_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage2_unit3_conv1_weight
+--------------------
+Op:Convolution, Name=stage2_unit3_conv1
+Inputs:
+	arg[0]=stage2_unit3_relu1(0)
+	arg[1]=stage2_unit3_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=128
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage2_unit3_bn2_gamma
+Variable:stage2_unit3_bn2_beta
+Variable:stage2_unit3_bn2_moving_mean
+Variable:stage2_unit3_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage2_unit3_bn2
+Inputs:
+	arg[0]=stage2_unit3_conv1(0)
+	arg[1]=stage2_unit3_bn2_gamma(0) version=0
+	arg[2]=stage2_unit3_bn2_beta(0) version=0
+	arg[3]=stage2_unit3_bn2_moving_mean(0) version=1
+	arg[4]=stage2_unit3_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit3_relu2
+Inputs:
+	arg[0]=stage2_unit3_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage2_unit3_conv2_weight
+--------------------
+Op:Convolution, Name=stage2_unit3_conv2
+Inputs:
+	arg[0]=stage2_unit3_relu2(0)
+	arg[1]=stage2_unit3_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=128
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Variable:stage2_unit3_bn3_gamma
+Variable:stage2_unit3_bn3_beta
+Variable:stage2_unit3_bn3_moving_mean
+Variable:stage2_unit3_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage2_unit3_bn3
+Inputs:
+	arg[0]=stage2_unit3_conv2(0)
+	arg[1]=stage2_unit3_bn3_gamma(0) version=0
+	arg[2]=stage2_unit3_bn3_beta(0) version=0
+	arg[3]=stage2_unit3_bn3_moving_mean(0) version=1
+	arg[4]=stage2_unit3_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit3_relu3
+Inputs:
+	arg[0]=stage2_unit3_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage2_unit3_conv3_weight
+--------------------
+Op:Convolution, Name=stage2_unit3_conv3
+Inputs:
+	arg[0]=stage2_unit3_relu3(0)
+	arg[1]=stage2_unit3_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus5
+Inputs:
+	arg[0]=stage2_unit3_conv3(0)
+	arg[1]=_plus4(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+Variable:stage2_unit4_bn1_gamma
+Variable:stage2_unit4_bn1_beta
+Variable:stage2_unit4_bn1_moving_mean
+Variable:stage2_unit4_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage2_unit4_bn1
+Inputs:
+	arg[0]=_plus5(0)
+	arg[1]=stage2_unit4_bn1_gamma(0) version=0
+	arg[2]=stage2_unit4_bn1_beta(0) version=0
+	arg[3]=stage2_unit4_bn1_moving_mean(0) version=1
+	arg[4]=stage2_unit4_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit4_relu1
+Inputs:
+	arg[0]=stage2_unit4_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage2_unit4_conv1_weight
+--------------------
+Op:Convolution, Name=stage2_unit4_conv1
+Inputs:
+	arg[0]=stage2_unit4_relu1(0)
+	arg[1]=stage2_unit4_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=128
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage2_unit4_bn2_gamma
+Variable:stage2_unit4_bn2_beta
+Variable:stage2_unit4_bn2_moving_mean
+Variable:stage2_unit4_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage2_unit4_bn2
+Inputs:
+	arg[0]=stage2_unit4_conv1(0)
+	arg[1]=stage2_unit4_bn2_gamma(0) version=0
+	arg[2]=stage2_unit4_bn2_beta(0) version=0
+	arg[3]=stage2_unit4_bn2_moving_mean(0) version=1
+	arg[4]=stage2_unit4_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit4_relu2
+Inputs:
+	arg[0]=stage2_unit4_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage2_unit4_conv2_weight
+--------------------
+Op:Convolution, Name=stage2_unit4_conv2
+Inputs:
+	arg[0]=stage2_unit4_relu2(0)
+	arg[1]=stage2_unit4_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=128
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Variable:stage2_unit4_bn3_gamma
+Variable:stage2_unit4_bn3_beta
+Variable:stage2_unit4_bn3_moving_mean
+Variable:stage2_unit4_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage2_unit4_bn3
+Inputs:
+	arg[0]=stage2_unit4_conv2(0)
+	arg[1]=stage2_unit4_bn3_gamma(0) version=0
+	arg[2]=stage2_unit4_bn3_beta(0) version=0
+	arg[3]=stage2_unit4_bn3_moving_mean(0) version=1
+	arg[4]=stage2_unit4_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit4_relu3
+Inputs:
+	arg[0]=stage2_unit4_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage2_unit4_conv3_weight
+--------------------
+Op:Convolution, Name=stage2_unit4_conv3
+Inputs:
+	arg[0]=stage2_unit4_relu3(0)
+	arg[1]=stage2_unit4_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus6
+Inputs:
+	arg[0]=stage2_unit4_conv3(0)
+	arg[1]=_plus5(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+Variable:stage3_unit1_bn1_gamma
+Variable:stage3_unit1_bn1_beta
+Variable:stage3_unit1_bn1_moving_mean
+Variable:stage3_unit1_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit1_bn1
+Inputs:
+	arg[0]=_plus6(0)
+	arg[1]=stage3_unit1_bn1_gamma(0) version=0
+	arg[2]=stage3_unit1_bn1_beta(0) version=0
+	arg[3]=stage3_unit1_bn1_moving_mean(0) version=1
+	arg[4]=stage3_unit1_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit1_relu1
+Inputs:
+	arg[0]=stage3_unit1_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit1_conv1_weight
+--------------------
+Op:Convolution, Name=stage3_unit1_conv1
+Inputs:
+	arg[0]=stage3_unit1_relu1(0)
+	arg[1]=stage3_unit1_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage3_unit1_bn2_gamma
+Variable:stage3_unit1_bn2_beta
+Variable:stage3_unit1_bn2_moving_mean
+Variable:stage3_unit1_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit1_bn2
+Inputs:
+	arg[0]=stage3_unit1_conv1(0)
+	arg[1]=stage3_unit1_bn2_gamma(0) version=0
+	arg[2]=stage3_unit1_bn2_beta(0) version=0
+	arg[3]=stage3_unit1_bn2_moving_mean(0) version=1
+	arg[4]=stage3_unit1_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit1_relu2
+Inputs:
+	arg[0]=stage3_unit1_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit1_conv2_weight
+--------------------
+Op:Convolution, Name=stage3_unit1_conv2
+Inputs:
+	arg[0]=stage3_unit1_relu2(0)
+	arg[1]=stage3_unit1_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=256
+	pad=(1, 1)
+	stride=(2, 2)
+	workspace=256
+Variable:stage3_unit1_bn3_gamma
+Variable:stage3_unit1_bn3_beta
+Variable:stage3_unit1_bn3_moving_mean
+Variable:stage3_unit1_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit1_bn3
+Inputs:
+	arg[0]=stage3_unit1_conv2(0)
+	arg[1]=stage3_unit1_bn3_gamma(0) version=0
+	arg[2]=stage3_unit1_bn3_beta(0) version=0
+	arg[3]=stage3_unit1_bn3_moving_mean(0) version=1
+	arg[4]=stage3_unit1_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit1_relu3
+Inputs:
+	arg[0]=stage3_unit1_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit1_conv3_weight
+--------------------
+Op:Convolution, Name=stage3_unit1_conv3
+Inputs:
+	arg[0]=stage3_unit1_relu3(0)
+	arg[1]=stage3_unit1_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage3_unit1_sc_weight
+--------------------
+Op:Convolution, Name=stage3_unit1_sc
+Inputs:
+	arg[0]=stage3_unit1_relu1(0)
+	arg[1]=stage3_unit1_sc_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	stride=(2, 2)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus7
+Inputs:
+	arg[0]=stage3_unit1_conv3(0)
+	arg[1]=stage3_unit1_sc(0)
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+Variable:stage3_unit2_bn1_gamma
+Variable:stage3_unit2_bn1_beta
+Variable:stage3_unit2_bn1_moving_mean
+Variable:stage3_unit2_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit2_bn1
+Inputs:
+	arg[0]=_plus7(0)
+	arg[1]=stage3_unit2_bn1_gamma(0) version=0
+	arg[2]=stage3_unit2_bn1_beta(0) version=0
+	arg[3]=stage3_unit2_bn1_moving_mean(0) version=1
+	arg[4]=stage3_unit2_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit2_relu1
+Inputs:
+	arg[0]=stage3_unit2_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit2_conv1_weight
+--------------------
+Op:Convolution, Name=stage3_unit2_conv1
+Inputs:
+	arg[0]=stage3_unit2_relu1(0)
+	arg[1]=stage3_unit2_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage3_unit2_bn2_gamma
+Variable:stage3_unit2_bn2_beta
+Variable:stage3_unit2_bn2_moving_mean
+Variable:stage3_unit2_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit2_bn2
+Inputs:
+	arg[0]=stage3_unit2_conv1(0)
+	arg[1]=stage3_unit2_bn2_gamma(0) version=0
+	arg[2]=stage3_unit2_bn2_beta(0) version=0
+	arg[3]=stage3_unit2_bn2_moving_mean(0) version=1
+	arg[4]=stage3_unit2_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit2_relu2
+Inputs:
+	arg[0]=stage3_unit2_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit2_conv2_weight
+--------------------
+Op:Convolution, Name=stage3_unit2_conv2
+Inputs:
+	arg[0]=stage3_unit2_relu2(0)
+	arg[1]=stage3_unit2_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=256
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Variable:stage3_unit2_bn3_gamma
+Variable:stage3_unit2_bn3_beta
+Variable:stage3_unit2_bn3_moving_mean
+Variable:stage3_unit2_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit2_bn3
+Inputs:
+	arg[0]=stage3_unit2_conv2(0)
+	arg[1]=stage3_unit2_bn3_gamma(0) version=0
+	arg[2]=stage3_unit2_bn3_beta(0) version=0
+	arg[3]=stage3_unit2_bn3_moving_mean(0) version=1
+	arg[4]=stage3_unit2_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit2_relu3
+Inputs:
+	arg[0]=stage3_unit2_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit2_conv3_weight
+--------------------
+Op:Convolution, Name=stage3_unit2_conv3
+Inputs:
+	arg[0]=stage3_unit2_relu3(0)
+	arg[1]=stage3_unit2_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus8
+Inputs:
+	arg[0]=stage3_unit2_conv3(0)
+	arg[1]=_plus7(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+Variable:stage3_unit3_bn1_gamma
+Variable:stage3_unit3_bn1_beta
+Variable:stage3_unit3_bn1_moving_mean
+Variable:stage3_unit3_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit3_bn1
+Inputs:
+	arg[0]=_plus8(0)
+	arg[1]=stage3_unit3_bn1_gamma(0) version=0
+	arg[2]=stage3_unit3_bn1_beta(0) version=0
+	arg[3]=stage3_unit3_bn1_moving_mean(0) version=1
+	arg[4]=stage3_unit3_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit3_relu1
+Inputs:
+	arg[0]=stage3_unit3_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit3_conv1_weight
+--------------------
+Op:Convolution, Name=stage3_unit3_conv1
+Inputs:
+	arg[0]=stage3_unit3_relu1(0)
+	arg[1]=stage3_unit3_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage3_unit3_bn2_gamma
+Variable:stage3_unit3_bn2_beta
+Variable:stage3_unit3_bn2_moving_mean
+Variable:stage3_unit3_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit3_bn2
+Inputs:
+	arg[0]=stage3_unit3_conv1(0)
+	arg[1]=stage3_unit3_bn2_gamma(0) version=0
+	arg[2]=stage3_unit3_bn2_beta(0) version=0
+	arg[3]=stage3_unit3_bn2_moving_mean(0) version=1
+	arg[4]=stage3_unit3_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit3_relu2
+Inputs:
+	arg[0]=stage3_unit3_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit3_conv2_weight
+--------------------
+Op:Convolution, Name=stage3_unit3_conv2
+Inputs:
+	arg[0]=stage3_unit3_relu2(0)
+	arg[1]=stage3_unit3_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=256
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Variable:stage3_unit3_bn3_gamma
+Variable:stage3_unit3_bn3_beta
+Variable:stage3_unit3_bn3_moving_mean
+Variable:stage3_unit3_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit3_bn3
+Inputs:
+	arg[0]=stage3_unit3_conv2(0)
+	arg[1]=stage3_unit3_bn3_gamma(0) version=0
+	arg[2]=stage3_unit3_bn3_beta(0) version=0
+	arg[3]=stage3_unit3_bn3_moving_mean(0) version=1
+	arg[4]=stage3_unit3_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit3_relu3
+Inputs:
+	arg[0]=stage3_unit3_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit3_conv3_weight
+--------------------
+Op:Convolution, Name=stage3_unit3_conv3
+Inputs:
+	arg[0]=stage3_unit3_relu3(0)
+	arg[1]=stage3_unit3_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus9
+Inputs:
+	arg[0]=stage3_unit3_conv3(0)
+	arg[1]=_plus8(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+Variable:stage3_unit4_bn1_gamma
+Variable:stage3_unit4_bn1_beta
+Variable:stage3_unit4_bn1_moving_mean
+Variable:stage3_unit4_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit4_bn1
+Inputs:
+	arg[0]=_plus9(0)
+	arg[1]=stage3_unit4_bn1_gamma(0) version=0
+	arg[2]=stage3_unit4_bn1_beta(0) version=0
+	arg[3]=stage3_unit4_bn1_moving_mean(0) version=1
+	arg[4]=stage3_unit4_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit4_relu1
+Inputs:
+	arg[0]=stage3_unit4_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit4_conv1_weight
+--------------------
+Op:Convolution, Name=stage3_unit4_conv1
+Inputs:
+	arg[0]=stage3_unit4_relu1(0)
+	arg[1]=stage3_unit4_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage3_unit4_bn2_gamma
+Variable:stage3_unit4_bn2_beta
+Variable:stage3_unit4_bn2_moving_mean
+Variable:stage3_unit4_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit4_bn2
+Inputs:
+	arg[0]=stage3_unit4_conv1(0)
+	arg[1]=stage3_unit4_bn2_gamma(0) version=0
+	arg[2]=stage3_unit4_bn2_beta(0) version=0
+	arg[3]=stage3_unit4_bn2_moving_mean(0) version=1
+	arg[4]=stage3_unit4_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit4_relu2
+Inputs:
+	arg[0]=stage3_unit4_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit4_conv2_weight
+--------------------
+Op:Convolution, Name=stage3_unit4_conv2
+Inputs:
+	arg[0]=stage3_unit4_relu2(0)
+	arg[1]=stage3_unit4_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=256
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Variable:stage3_unit4_bn3_gamma
+Variable:stage3_unit4_bn3_beta
+Variable:stage3_unit4_bn3_moving_mean
+Variable:stage3_unit4_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit4_bn3
+Inputs:
+	arg[0]=stage3_unit4_conv2(0)
+	arg[1]=stage3_unit4_bn3_gamma(0) version=0
+	arg[2]=stage3_unit4_bn3_beta(0) version=0
+	arg[3]=stage3_unit4_bn3_moving_mean(0) version=1
+	arg[4]=stage3_unit4_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit4_relu3
+Inputs:
+	arg[0]=stage3_unit4_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit4_conv3_weight
+--------------------
+Op:Convolution, Name=stage3_unit4_conv3
+Inputs:
+	arg[0]=stage3_unit4_relu3(0)
+	arg[1]=stage3_unit4_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus10
+Inputs:
+	arg[0]=stage3_unit4_conv3(0)
+	arg[1]=_plus9(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+Variable:stage3_unit5_bn1_gamma
+Variable:stage3_unit5_bn1_beta
+Variable:stage3_unit5_bn1_moving_mean
+Variable:stage3_unit5_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit5_bn1
+Inputs:
+	arg[0]=_plus10(0)
+	arg[1]=stage3_unit5_bn1_gamma(0) version=0
+	arg[2]=stage3_unit5_bn1_beta(0) version=0
+	arg[3]=stage3_unit5_bn1_moving_mean(0) version=1
+	arg[4]=stage3_unit5_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit5_relu1
+Inputs:
+	arg[0]=stage3_unit5_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit5_conv1_weight
+--------------------
+Op:Convolution, Name=stage3_unit5_conv1
+Inputs:
+	arg[0]=stage3_unit5_relu1(0)
+	arg[1]=stage3_unit5_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage3_unit5_bn2_gamma
+Variable:stage3_unit5_bn2_beta
+Variable:stage3_unit5_bn2_moving_mean
+Variable:stage3_unit5_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit5_bn2
+Inputs:
+	arg[0]=stage3_unit5_conv1(0)
+	arg[1]=stage3_unit5_bn2_gamma(0) version=0
+	arg[2]=stage3_unit5_bn2_beta(0) version=0
+	arg[3]=stage3_unit5_bn2_moving_mean(0) version=1
+	arg[4]=stage3_unit5_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit5_relu2
+Inputs:
+	arg[0]=stage3_unit5_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit5_conv2_weight
+--------------------
+Op:Convolution, Name=stage3_unit5_conv2
+Inputs:
+	arg[0]=stage3_unit5_relu2(0)
+	arg[1]=stage3_unit5_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=256
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Variable:stage3_unit5_bn3_gamma
+Variable:stage3_unit5_bn3_beta
+Variable:stage3_unit5_bn3_moving_mean
+Variable:stage3_unit5_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit5_bn3
+Inputs:
+	arg[0]=stage3_unit5_conv2(0)
+	arg[1]=stage3_unit5_bn3_gamma(0) version=0
+	arg[2]=stage3_unit5_bn3_beta(0) version=0
+	arg[3]=stage3_unit5_bn3_moving_mean(0) version=1
+	arg[4]=stage3_unit5_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit5_relu3
+Inputs:
+	arg[0]=stage3_unit5_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit5_conv3_weight
+--------------------
+Op:Convolution, Name=stage3_unit5_conv3
+Inputs:
+	arg[0]=stage3_unit5_relu3(0)
+	arg[1]=stage3_unit5_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus11
+Inputs:
+	arg[0]=stage3_unit5_conv3(0)
+	arg[1]=_plus10(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+Variable:stage3_unit6_bn1_gamma
+Variable:stage3_unit6_bn1_beta
+Variable:stage3_unit6_bn1_moving_mean
+Variable:stage3_unit6_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit6_bn1
+Inputs:
+	arg[0]=_plus11(0)
+	arg[1]=stage3_unit6_bn1_gamma(0) version=0
+	arg[2]=stage3_unit6_bn1_beta(0) version=0
+	arg[3]=stage3_unit6_bn1_moving_mean(0) version=1
+	arg[4]=stage3_unit6_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit6_relu1
+Inputs:
+	arg[0]=stage3_unit6_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit6_conv1_weight
+--------------------
+Op:Convolution, Name=stage3_unit6_conv1
+Inputs:
+	arg[0]=stage3_unit6_relu1(0)
+	arg[1]=stage3_unit6_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage3_unit6_bn2_gamma
+Variable:stage3_unit6_bn2_beta
+Variable:stage3_unit6_bn2_moving_mean
+Variable:stage3_unit6_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit6_bn2
+Inputs:
+	arg[0]=stage3_unit6_conv1(0)
+	arg[1]=stage3_unit6_bn2_gamma(0) version=0
+	arg[2]=stage3_unit6_bn2_beta(0) version=0
+	arg[3]=stage3_unit6_bn2_moving_mean(0) version=1
+	arg[4]=stage3_unit6_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit6_relu2
+Inputs:
+	arg[0]=stage3_unit6_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit6_conv2_weight
+--------------------
+Op:Convolution, Name=stage3_unit6_conv2
+Inputs:
+	arg[0]=stage3_unit6_relu2(0)
+	arg[1]=stage3_unit6_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=256
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Variable:stage3_unit6_bn3_gamma
+Variable:stage3_unit6_bn3_beta
+Variable:stage3_unit6_bn3_moving_mean
+Variable:stage3_unit6_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage3_unit6_bn3
+Inputs:
+	arg[0]=stage3_unit6_conv2(0)
+	arg[1]=stage3_unit6_bn3_gamma(0) version=0
+	arg[2]=stage3_unit6_bn3_beta(0) version=0
+	arg[3]=stage3_unit6_bn3_moving_mean(0) version=1
+	arg[4]=stage3_unit6_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit6_relu3
+Inputs:
+	arg[0]=stage3_unit6_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage3_unit6_conv3_weight
+--------------------
+Op:Convolution, Name=stage3_unit6_conv3
+Inputs:
+	arg[0]=stage3_unit6_relu3(0)
+	arg[1]=stage3_unit6_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus12
+Inputs:
+	arg[0]=stage3_unit6_conv3(0)
+	arg[1]=_plus11(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+Variable:stage4_unit1_bn1_gamma
+Variable:stage4_unit1_bn1_beta
+Variable:stage4_unit1_bn1_moving_mean
+Variable:stage4_unit1_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage4_unit1_bn1
+Inputs:
+	arg[0]=_plus12(0)
+	arg[1]=stage4_unit1_bn1_gamma(0) version=0
+	arg[2]=stage4_unit1_bn1_beta(0) version=0
+	arg[3]=stage4_unit1_bn1_moving_mean(0) version=1
+	arg[4]=stage4_unit1_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit1_relu1
+Inputs:
+	arg[0]=stage4_unit1_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage4_unit1_conv1_weight
+--------------------
+Op:Convolution, Name=stage4_unit1_conv1
+Inputs:
+	arg[0]=stage4_unit1_relu1(0)
+	arg[1]=stage4_unit1_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage4_unit1_bn2_gamma
+Variable:stage4_unit1_bn2_beta
+Variable:stage4_unit1_bn2_moving_mean
+Variable:stage4_unit1_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage4_unit1_bn2
+Inputs:
+	arg[0]=stage4_unit1_conv1(0)
+	arg[1]=stage4_unit1_bn2_gamma(0) version=0
+	arg[2]=stage4_unit1_bn2_beta(0) version=0
+	arg[3]=stage4_unit1_bn2_moving_mean(0) version=1
+	arg[4]=stage4_unit1_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit1_relu2
+Inputs:
+	arg[0]=stage4_unit1_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage4_unit1_conv2_weight
+--------------------
+Op:Convolution, Name=stage4_unit1_conv2
+Inputs:
+	arg[0]=stage4_unit1_relu2(0)
+	arg[1]=stage4_unit1_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=512
+	pad=(1, 1)
+	stride=(2, 2)
+	workspace=256
+Variable:stage4_unit1_bn3_gamma
+Variable:stage4_unit1_bn3_beta
+Variable:stage4_unit1_bn3_moving_mean
+Variable:stage4_unit1_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage4_unit1_bn3
+Inputs:
+	arg[0]=stage4_unit1_conv2(0)
+	arg[1]=stage4_unit1_bn3_gamma(0) version=0
+	arg[2]=stage4_unit1_bn3_beta(0) version=0
+	arg[3]=stage4_unit1_bn3_moving_mean(0) version=1
+	arg[4]=stage4_unit1_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit1_relu3
+Inputs:
+	arg[0]=stage4_unit1_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage4_unit1_conv3_weight
+--------------------
+Op:Convolution, Name=stage4_unit1_conv3
+Inputs:
+	arg[0]=stage4_unit1_relu3(0)
+	arg[1]=stage4_unit1_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=2048
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage4_unit1_sc_weight
+--------------------
+Op:Convolution, Name=stage4_unit1_sc
+Inputs:
+	arg[0]=stage4_unit1_relu1(0)
+	arg[1]=stage4_unit1_sc_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=2048
+	stride=(2, 2)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus13
+Inputs:
+	arg[0]=stage4_unit1_conv3(0)
+	arg[1]=stage4_unit1_sc(0)
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+Variable:stage4_unit2_bn1_gamma
+Variable:stage4_unit2_bn1_beta
+Variable:stage4_unit2_bn1_moving_mean
+Variable:stage4_unit2_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage4_unit2_bn1
+Inputs:
+	arg[0]=_plus13(0)
+	arg[1]=stage4_unit2_bn1_gamma(0) version=0
+	arg[2]=stage4_unit2_bn1_beta(0) version=0
+	arg[3]=stage4_unit2_bn1_moving_mean(0) version=1
+	arg[4]=stage4_unit2_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit2_relu1
+Inputs:
+	arg[0]=stage4_unit2_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage4_unit2_conv1_weight
+--------------------
+Op:Convolution, Name=stage4_unit2_conv1
+Inputs:
+	arg[0]=stage4_unit2_relu1(0)
+	arg[1]=stage4_unit2_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage4_unit2_bn2_gamma
+Variable:stage4_unit2_bn2_beta
+Variable:stage4_unit2_bn2_moving_mean
+Variable:stage4_unit2_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage4_unit2_bn2
+Inputs:
+	arg[0]=stage4_unit2_conv1(0)
+	arg[1]=stage4_unit2_bn2_gamma(0) version=0
+	arg[2]=stage4_unit2_bn2_beta(0) version=0
+	arg[3]=stage4_unit2_bn2_moving_mean(0) version=1
+	arg[4]=stage4_unit2_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit2_relu2
+Inputs:
+	arg[0]=stage4_unit2_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage4_unit2_conv2_weight
+--------------------
+Op:Convolution, Name=stage4_unit2_conv2
+Inputs:
+	arg[0]=stage4_unit2_relu2(0)
+	arg[1]=stage4_unit2_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=512
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Variable:stage4_unit2_bn3_gamma
+Variable:stage4_unit2_bn3_beta
+Variable:stage4_unit2_bn3_moving_mean
+Variable:stage4_unit2_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage4_unit2_bn3
+Inputs:
+	arg[0]=stage4_unit2_conv2(0)
+	arg[1]=stage4_unit2_bn3_gamma(0) version=0
+	arg[2]=stage4_unit2_bn3_beta(0) version=0
+	arg[3]=stage4_unit2_bn3_moving_mean(0) version=1
+	arg[4]=stage4_unit2_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit2_relu3
+Inputs:
+	arg[0]=stage4_unit2_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage4_unit2_conv3_weight
+--------------------
+Op:Convolution, Name=stage4_unit2_conv3
+Inputs:
+	arg[0]=stage4_unit2_relu3(0)
+	arg[1]=stage4_unit2_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=2048
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus14
+Inputs:
+	arg[0]=stage4_unit2_conv3(0)
+	arg[1]=_plus13(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+Variable:stage4_unit3_bn1_gamma
+Variable:stage4_unit3_bn1_beta
+Variable:stage4_unit3_bn1_moving_mean
+Variable:stage4_unit3_bn1_moving_var
+--------------------
+Op:BatchNorm, Name=stage4_unit3_bn1
+Inputs:
+	arg[0]=_plus14(0)
+	arg[1]=stage4_unit3_bn1_gamma(0) version=0
+	arg[2]=stage4_unit3_bn1_beta(0) version=0
+	arg[3]=stage4_unit3_bn1_moving_mean(0) version=1
+	arg[4]=stage4_unit3_bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit3_relu1
+Inputs:
+	arg[0]=stage4_unit3_bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage4_unit3_conv1_weight
+--------------------
+Op:Convolution, Name=stage4_unit3_conv1
+Inputs:
+	arg[0]=stage4_unit3_relu1(0)
+	arg[1]=stage4_unit3_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Variable:stage4_unit3_bn2_gamma
+Variable:stage4_unit3_bn2_beta
+Variable:stage4_unit3_bn2_moving_mean
+Variable:stage4_unit3_bn2_moving_var
+--------------------
+Op:BatchNorm, Name=stage4_unit3_bn2
+Inputs:
+	arg[0]=stage4_unit3_conv1(0)
+	arg[1]=stage4_unit3_bn2_gamma(0) version=0
+	arg[2]=stage4_unit3_bn2_beta(0) version=0
+	arg[3]=stage4_unit3_bn2_moving_mean(0) version=1
+	arg[4]=stage4_unit3_bn2_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit3_relu2
+Inputs:
+	arg[0]=stage4_unit3_bn2(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage4_unit3_conv2_weight
+--------------------
+Op:Convolution, Name=stage4_unit3_conv2
+Inputs:
+	arg[0]=stage4_unit3_relu2(0)
+	arg[1]=stage4_unit3_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=512
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Variable:stage4_unit3_bn3_gamma
+Variable:stage4_unit3_bn3_beta
+Variable:stage4_unit3_bn3_moving_mean
+Variable:stage4_unit3_bn3_moving_var
+--------------------
+Op:BatchNorm, Name=stage4_unit3_bn3
+Inputs:
+	arg[0]=stage4_unit3_conv2(0)
+	arg[1]=stage4_unit3_bn3_gamma(0) version=0
+	arg[2]=stage4_unit3_bn3_beta(0) version=0
+	arg[3]=stage4_unit3_bn3_moving_mean(0) version=1
+	arg[4]=stage4_unit3_bn3_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit3_relu3
+Inputs:
+	arg[0]=stage4_unit3_bn3(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+Variable:stage4_unit3_conv3_weight
+--------------------
+Op:Convolution, Name=stage4_unit3_conv3
+Inputs:
+	arg[0]=stage4_unit3_relu3(0)
+	arg[1]=stage4_unit3_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=2048
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+--------------------
+Op:elemwise_add, Name=_plus15
+Inputs:
+	arg[0]=stage4_unit3_conv3(0)
+	arg[1]=_plus14(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+Variable:bn1_gamma
+Variable:bn1_beta
+Variable:bn1_moving_mean
+Variable:bn1_moving_var
+--------------------
+Op:BatchNorm, Name=bn1
+Inputs:
+	arg[0]=_plus15(0)
+	arg[1]=bn1_gamma(0) version=0
+	arg[2]=bn1_beta(0) version=0
+	arg[3]=bn1_moving_mean(0) version=1
+	arg[4]=bn1_moving_var(0) version=1
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=relu1
+Inputs:
+	arg[0]=bn1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:Pooling, Name=pool1
+Inputs:
+	arg[0]=relu1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+	global_pool=True
+	kernel=(7, 7)
+	pool_type=avg
+--------------------
+Op:Flatten, Name=flatten0
+Inputs:
+	arg[0]=pool1(0)
+Attrs:
+	__mirror_stage__=1
+	__profiler_scope__=<unk>:
+Variable:fc1_weight
+Variable:fc1_bias
+--------------------
+Op:FullyConnected, Name=fc1
+Inputs:
+	arg[0]=flatten0(0)
+	arg[1]=fc1_weight(0) version=0
+	arg[2]=fc1_bias(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	num_hidden=10
+Variable:softmax_label
+--------------------
+Op:SoftmaxOutput, Name=softmax
+Inputs:
+	arg[0]=fc1(0)
+	arg[1]=softmax_label(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+--------------------
+Op:_backward_SoftmaxOutput, Name=softmax_backward
+Inputs:
+	arg[0]=softmax(0)
+	arg[1]=softmax_label(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+Control deps:
+	cdep[0]=softmax
+--------------------
+Op:_FusedOp, Name=elemwise_add_elemwise_add
+Inputs:
+	arg[0]=stage4_unit3_conv3(0)
+	arg[1]=stage4_unit2_conv3(0)
+	arg[2]=_plus13(0)
+Attrs:
+	num_inputs=3
+	num_outputs=2
+--------------------
+Op:BatchNorm, Name=bn1_mirror
+Inputs:
+	arg[0]=elemwise_add_elemwise_add(0)
+	arg[1]=bn1_gamma(0) version=0
+	arg[2]=bn1_beta(0) version=0
+	arg[3]=bn1_moving_mean(0) version=1
+	arg[4]=bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=relu1_mirror
+Inputs:
+	arg[0]=bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:Pooling, Name=pool1_mirror
+Inputs:
+	arg[0]=relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	global_pool=True
+	kernel=(7, 7)
+	pool_type=avg
+--------------------
+Op:Flatten, Name=flatten0_mirror
+Inputs:
+	arg[0]=pool1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+--------------------
+Op:_backward_FullyConnected, Name=fc1_backward
+Inputs:
+	arg[0]=softmax_backward(0)
+	arg[1]=flatten0_mirror(0)
+	arg[2]=fc1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	num_hidden=10
+Control deps:
+	cdep[0]=fc1
+--------------------
+Op:_backward_copy, Name=flatten0_mirror_backward
+Inputs:
+	arg[0]=fc1_backward(0)
+Attrs:
+	__profiler_scope__=<unk>:
+Control deps:
+	cdep[0]=flatten0_mirror
+--------------------
+Op:_backward_Pooling, Name=pool1_mirror_backward
+Inputs:
+	arg[0]=flatten0_mirror_backward(0)
+	arg[1]=relu1_mirror(0)
+	arg[2]=pool1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	global_pool=True
+	kernel=(7, 7)
+	pool_type=avg
+Control deps:
+	cdep[0]=pool1_mirror
+--------------------
+Op:_backward_Activation, Name=relu1_mirror_backward
+Inputs:
+	arg[0]=pool1_mirror_backward(0)
+	arg[1]=relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=bn1_mirror_backward
+Inputs:
+	arg[0]=relu1_mirror_backward(0)
+	arg[1]=bn1_mirror(1)
+	arg[2]=bn1_mirror(2)
+	arg[3]=elemwise_add_elemwise_add(0)
+	arg[4]=bn1_gamma(0) version=0
+	arg[5]=bn1_beta(0) version=0
+	arg[6]=bn1_moving_mean(0) version=1
+	arg[7]=bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=bn1_mirror
+--------------------
+Op:BatchNorm, Name=stage4_unit3_bn3_mirror
+Inputs:
+	arg[0]=stage4_unit3_conv2(0)
+	arg[1]=stage4_unit3_bn3_gamma(0) version=0
+	arg[2]=stage4_unit3_bn3_beta(0) version=0
+	arg[3]=stage4_unit3_bn3_moving_mean(0) version=1
+	arg[4]=stage4_unit3_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit3_relu3_mirror
+Inputs:
+	arg[0]=stage4_unit3_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage4_unit3_conv3_backward
+Inputs:
+	arg[0]=bn1_mirror_backward(0)
+	arg[1]=stage4_unit3_relu3_mirror(0)
+	arg[2]=stage4_unit3_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=2048
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage4_unit3_conv3
+--------------------
+Op:_backward_Activation, Name=stage4_unit3_relu3_mirror_backward
+Inputs:
+	arg[0]=stage4_unit3_conv3_backward(0)
+	arg[1]=stage4_unit3_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage4_unit3_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage4_unit3_bn3_mirror_backward
+Inputs:
+	arg[0]=stage4_unit3_relu3_mirror_backward(0)
+	arg[1]=stage4_unit3_bn3_mirror(1)
+	arg[2]=stage4_unit3_bn3_mirror(2)
+	arg[3]=stage4_unit3_conv2(0)
+	arg[4]=stage4_unit3_bn3_gamma(0) version=0
+	arg[5]=stage4_unit3_bn3_beta(0) version=0
+	arg[6]=stage4_unit3_bn3_moving_mean(0) version=1
+	arg[7]=stage4_unit3_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage4_unit3_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage4_unit3_bn2_mirror
+Inputs:
+	arg[0]=stage4_unit3_conv1(0)
+	arg[1]=stage4_unit3_bn2_gamma(0) version=0
+	arg[2]=stage4_unit3_bn2_beta(0) version=0
+	arg[3]=stage4_unit3_bn2_moving_mean(0) version=1
+	arg[4]=stage4_unit3_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit3_relu2_mirror
+Inputs:
+	arg[0]=stage4_unit3_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage4_unit3_conv2_backward
+Inputs:
+	arg[0]=stage4_unit3_bn3_mirror_backward(0)
+	arg[1]=stage4_unit3_relu2_mirror(0)
+	arg[2]=stage4_unit3_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=512
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage4_unit3_conv2
+--------------------
+Op:_backward_Activation, Name=stage4_unit3_relu2_mirror_backward
+Inputs:
+	arg[0]=stage4_unit3_conv2_backward(0)
+	arg[1]=stage4_unit3_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage4_unit3_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage4_unit3_bn2_mirror_backward
+Inputs:
+	arg[0]=stage4_unit3_relu2_mirror_backward(0)
+	arg[1]=stage4_unit3_bn2_mirror(1)
+	arg[2]=stage4_unit3_bn2_mirror(2)
+	arg[3]=stage4_unit3_conv1(0)
+	arg[4]=stage4_unit3_bn2_gamma(0) version=0
+	arg[5]=stage4_unit3_bn2_beta(0) version=0
+	arg[6]=stage4_unit3_bn2_moving_mean(0) version=1
+	arg[7]=stage4_unit3_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage4_unit3_bn2_mirror
+--------------------
+Op:BatchNorm, Name=stage4_unit3_bn1_mirror
+Inputs:
+	arg[0]=elemwise_add_elemwise_add(1)
+	arg[1]=stage4_unit3_bn1_gamma(0) version=0
+	arg[2]=stage4_unit3_bn1_beta(0) version=0
+	arg[3]=stage4_unit3_bn1_moving_mean(0) version=1
+	arg[4]=stage4_unit3_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit3_relu1_mirror
+Inputs:
+	arg[0]=stage4_unit3_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage4_unit3_conv1_backward
+Inputs:
+	arg[0]=stage4_unit3_bn2_mirror_backward(0)
+	arg[1]=stage4_unit3_relu1_mirror(0)
+	arg[2]=stage4_unit3_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage4_unit3_conv1
+--------------------
+Op:_backward_Activation, Name=stage4_unit3_relu1_mirror_backward
+Inputs:
+	arg[0]=stage4_unit3_conv1_backward(0)
+	arg[1]=stage4_unit3_relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage4_unit3_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage4_unit3_bn1_mirror_backward
+Inputs:
+	arg[0]=stage4_unit3_relu1_mirror_backward(0)
+	arg[1]=stage4_unit3_bn1_mirror(1)
+	arg[2]=stage4_unit3_bn1_mirror(2)
+	arg[3]=elemwise_add_elemwise_add(1)
+	arg[4]=stage4_unit3_bn1_gamma(0) version=0
+	arg[5]=stage4_unit3_bn1_beta(0) version=0
+	arg[6]=stage4_unit3_bn1_moving_mean(0) version=1
+	arg[7]=stage4_unit3_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage4_unit3_bn1_mirror
+--------------------
+Op:add_n, Name=sum_grad
+Inputs:
+	arg[0]=bn1_mirror_backward(0)
+	arg[1]=stage4_unit3_bn1_mirror_backward(0)
+Attrs:
+	num_args=2
+--------------------
+Op:BatchNorm, Name=stage4_unit2_bn3_mirror
+Inputs:
+	arg[0]=stage4_unit2_conv2(0)
+	arg[1]=stage4_unit2_bn3_gamma(0) version=0
+	arg[2]=stage4_unit2_bn3_beta(0) version=0
+	arg[3]=stage4_unit2_bn3_moving_mean(0) version=1
+	arg[4]=stage4_unit2_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit2_relu3_mirror
+Inputs:
+	arg[0]=stage4_unit2_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage4_unit2_conv3_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage4_unit2_relu3_mirror(0)
+	arg[2]=stage4_unit2_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=2048
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage4_unit2_conv3
+--------------------
+Op:_backward_Activation, Name=stage4_unit2_relu3_mirror_backward
+Inputs:
+	arg[0]=stage4_unit2_conv3_backward(0)
+	arg[1]=stage4_unit2_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage4_unit2_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage4_unit2_bn3_mirror_backward
+Inputs:
+	arg[0]=stage4_unit2_relu3_mirror_backward(0)
+	arg[1]=stage4_unit2_bn3_mirror(1)
+	arg[2]=stage4_unit2_bn3_mirror(2)
+	arg[3]=stage4_unit2_conv2(0)
+	arg[4]=stage4_unit2_bn3_gamma(0) version=0
+	arg[5]=stage4_unit2_bn3_beta(0) version=0
+	arg[6]=stage4_unit2_bn3_moving_mean(0) version=1
+	arg[7]=stage4_unit2_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage4_unit2_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage4_unit2_bn2_mirror
+Inputs:
+	arg[0]=stage4_unit2_conv1(0)
+	arg[1]=stage4_unit2_bn2_gamma(0) version=0
+	arg[2]=stage4_unit2_bn2_beta(0) version=0
+	arg[3]=stage4_unit2_bn2_moving_mean(0) version=1
+	arg[4]=stage4_unit2_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit2_relu2_mirror
+Inputs:
+	arg[0]=stage4_unit2_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage4_unit2_conv2_backward
+Inputs:
+	arg[0]=stage4_unit2_bn3_mirror_backward(0)
+	arg[1]=stage4_unit2_relu2_mirror(0)
+	arg[2]=stage4_unit2_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=512
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage4_unit2_conv2
+--------------------
+Op:_backward_Activation, Name=stage4_unit2_relu2_mirror_backward
+Inputs:
+	arg[0]=stage4_unit2_conv2_backward(0)
+	arg[1]=stage4_unit2_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage4_unit2_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage4_unit2_bn2_mirror_backward
+Inputs:
+	arg[0]=stage4_unit2_relu2_mirror_backward(0)
+	arg[1]=stage4_unit2_bn2_mirror(1)
+	arg[2]=stage4_unit2_bn2_mirror(2)
+	arg[3]=stage4_unit2_conv1(0)
+	arg[4]=stage4_unit2_bn2_gamma(0) version=0
+	arg[5]=stage4_unit2_bn2_beta(0) version=0
+	arg[6]=stage4_unit2_bn2_moving_mean(0) version=1
+	arg[7]=stage4_unit2_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage4_unit2_bn2_mirror
+--------------------
+Op:BatchNorm, Name=stage4_unit2_bn1_mirror
+Inputs:
+	arg[0]=_plus13(0)
+	arg[1]=stage4_unit2_bn1_gamma(0) version=0
+	arg[2]=stage4_unit2_bn1_beta(0) version=0
+	arg[3]=stage4_unit2_bn1_moving_mean(0) version=1
+	arg[4]=stage4_unit2_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit2_relu1_mirror
+Inputs:
+	arg[0]=stage4_unit2_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage4_unit2_conv1_backward
+Inputs:
+	arg[0]=stage4_unit2_bn2_mirror_backward(0)
+	arg[1]=stage4_unit2_relu1_mirror(0)
+	arg[2]=stage4_unit2_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage4_unit2_conv1
+--------------------
+Op:_backward_Activation, Name=stage4_unit2_relu1_mirror_backward
+Inputs:
+	arg[0]=stage4_unit2_conv1_backward(0)
+	arg[1]=stage4_unit2_relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage4_unit2_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage4_unit2_bn1_mirror_backward
+Inputs:
+	arg[0]=stage4_unit2_relu1_mirror_backward(0)
+	arg[1]=stage4_unit2_bn1_mirror(1)
+	arg[2]=stage4_unit2_bn1_mirror(2)
+	arg[3]=_plus13(0)
+	arg[4]=stage4_unit2_bn1_gamma(0) version=0
+	arg[5]=stage4_unit2_bn1_beta(0) version=0
+	arg[6]=stage4_unit2_bn1_moving_mean(0) version=1
+	arg[7]=stage4_unit2_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage4_unit2_bn1_mirror
+--------------------
+Op:add_n, Name=sum_grad
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage4_unit2_bn1_mirror_backward(0)
+Attrs:
+	num_args=2
+--------------------
+Op:_FusedOp, Name=elemwise_add_elemwise_add_elemwise_add_elemwise_add_elemwise_add
+Inputs:
+	arg[0]=stage3_unit6_conv3(0)
+	arg[1]=stage3_unit5_conv3(0)
+	arg[2]=stage3_unit4_conv3(0)
+	arg[3]=stage3_unit3_conv3(0)
+	arg[4]=stage3_unit2_conv3(0)
+	arg[5]=_plus7(0)
+Attrs:
+	num_inputs=6
+	num_outputs=5
+--------------------
+Op:BatchNorm, Name=stage4_unit1_bn1_mirror
+Inputs:
+	arg[0]=elemwise_add_elemwise_add_elemwise_add_elemwise_add_elemwise_add(0)
+	arg[1]=stage4_unit1_bn1_gamma(0) version=0
+	arg[2]=stage4_unit1_bn1_beta(0) version=0
+	arg[3]=stage4_unit1_bn1_moving_mean(0) version=1
+	arg[4]=stage4_unit1_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit1_relu1_mirror
+Inputs:
+	arg[0]=stage4_unit1_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage4_unit1_sc_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage4_unit1_relu1_mirror(0)
+	arg[2]=stage4_unit1_sc_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=2048
+	stride=(2, 2)
+	workspace=256
+Control deps:
+	cdep[0]=stage4_unit1_sc
+--------------------
+Op:BatchNorm, Name=stage4_unit1_bn3_mirror
+Inputs:
+	arg[0]=stage4_unit1_conv2(0)
+	arg[1]=stage4_unit1_bn3_gamma(0) version=0
+	arg[2]=stage4_unit1_bn3_beta(0) version=0
+	arg[3]=stage4_unit1_bn3_moving_mean(0) version=1
+	arg[4]=stage4_unit1_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit1_relu3_mirror
+Inputs:
+	arg[0]=stage4_unit1_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage4_unit1_conv3_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage4_unit1_relu3_mirror(0)
+	arg[2]=stage4_unit1_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=2048
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage4_unit1_conv3
+--------------------
+Op:_backward_Activation, Name=stage4_unit1_relu3_mirror_backward
+Inputs:
+	arg[0]=stage4_unit1_conv3_backward(0)
+	arg[1]=stage4_unit1_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage4_unit1_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage4_unit1_bn3_mirror_backward
+Inputs:
+	arg[0]=stage4_unit1_relu3_mirror_backward(0)
+	arg[1]=stage4_unit1_bn3_mirror(1)
+	arg[2]=stage4_unit1_bn3_mirror(2)
+	arg[3]=stage4_unit1_conv2(0)
+	arg[4]=stage4_unit1_bn3_gamma(0) version=0
+	arg[5]=stage4_unit1_bn3_beta(0) version=0
+	arg[6]=stage4_unit1_bn3_moving_mean(0) version=1
+	arg[7]=stage4_unit1_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage4_unit1_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage4_unit1_bn2_mirror
+Inputs:
+	arg[0]=stage4_unit1_conv1(0)
+	arg[1]=stage4_unit1_bn2_gamma(0) version=0
+	arg[2]=stage4_unit1_bn2_beta(0) version=0
+	arg[3]=stage4_unit1_bn2_moving_mean(0) version=1
+	arg[4]=stage4_unit1_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage4_unit1_relu2_mirror
+Inputs:
+	arg[0]=stage4_unit1_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage4_unit1_conv2_backward
+Inputs:
+	arg[0]=stage4_unit1_bn3_mirror_backward(0)
+	arg[1]=stage4_unit1_relu2_mirror(0)
+	arg[2]=stage4_unit1_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=512
+	pad=(1, 1)
+	stride=(2, 2)
+	workspace=256
+Control deps:
+	cdep[0]=stage4_unit1_conv2
+--------------------
+Op:_backward_Activation, Name=stage4_unit1_relu2_mirror_backward
+Inputs:
+	arg[0]=stage4_unit1_conv2_backward(0)
+	arg[1]=stage4_unit1_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage4_unit1_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage4_unit1_bn2_mirror_backward
+Inputs:
+	arg[0]=stage4_unit1_relu2_mirror_backward(0)
+	arg[1]=stage4_unit1_bn2_mirror(1)
+	arg[2]=stage4_unit1_bn2_mirror(2)
+	arg[3]=stage4_unit1_conv1(0)
+	arg[4]=stage4_unit1_bn2_gamma(0) version=0
+	arg[5]=stage4_unit1_bn2_beta(0) version=0
+	arg[6]=stage4_unit1_bn2_moving_mean(0) version=1
+	arg[7]=stage4_unit1_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage4_unit1_bn2_mirror
+--------------------
+Op:_backward_Convolution, Name=stage4_unit1_conv1_backward
+Inputs:
+	arg[0]=stage4_unit1_bn2_mirror_backward(0)
+	arg[1]=stage4_unit1_relu1_mirror(0)
+	arg[2]=stage4_unit1_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage4_unit1_conv1
+--------------------
+Op:_FusedOp, Name=add_n__FusedOpOutHelper__backward_Activation
+Inputs:
+	arg[0]=stage4_unit1_sc_backward(0)
+	arg[1]=stage4_unit1_conv1_backward(0)
+	arg[2]=stage4_unit1_relu1_mirror(0)
+Attrs:
+	num_inputs=3
+	num_outputs=1
+Control deps:
+	cdep[0]=stage4_unit1_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage4_unit1_bn1_mirror_backward
+Inputs:
+	arg[0]=add_n__FusedOpOutHelper__backward_Activation(0)
+	arg[1]=stage4_unit1_bn1_mirror(1)
+	arg[2]=stage4_unit1_bn1_mirror(2)
+	arg[3]=elemwise_add_elemwise_add_elemwise_add_elemwise_add_elemwise_add(0)
+	arg[4]=stage4_unit1_bn1_gamma(0) version=0
+	arg[5]=stage4_unit1_bn1_beta(0) version=0
+	arg[6]=stage4_unit1_bn1_moving_mean(0) version=1
+	arg[7]=stage4_unit1_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage4_unit1_bn1_mirror
+--------------------
+Op:BatchNorm, Name=stage3_unit6_bn3_mirror
+Inputs:
+	arg[0]=stage3_unit6_conv2(0)
+	arg[1]=stage3_unit6_bn3_gamma(0) version=0
+	arg[2]=stage3_unit6_bn3_beta(0) version=0
+	arg[3]=stage3_unit6_bn3_moving_mean(0) version=1
+	arg[4]=stage3_unit6_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit6_relu3_mirror
+Inputs:
+	arg[0]=stage3_unit6_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit6_conv3_backward
+Inputs:
+	arg[0]=stage4_unit1_bn1_mirror_backward(0)
+	arg[1]=stage3_unit6_relu3_mirror(0)
+	arg[2]=stage3_unit6_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit6_conv3
+--------------------
+Op:_backward_Activation, Name=stage3_unit6_relu3_mirror_backward
+Inputs:
+	arg[0]=stage3_unit6_conv3_backward(0)
+	arg[1]=stage3_unit6_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit6_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit6_bn3_mirror_backward
+Inputs:
+	arg[0]=stage3_unit6_relu3_mirror_backward(0)
+	arg[1]=stage3_unit6_bn3_mirror(1)
+	arg[2]=stage3_unit6_bn3_mirror(2)
+	arg[3]=stage3_unit6_conv2(0)
+	arg[4]=stage3_unit6_bn3_gamma(0) version=0
+	arg[5]=stage3_unit6_bn3_beta(0) version=0
+	arg[6]=stage3_unit6_bn3_moving_mean(0) version=1
+	arg[7]=stage3_unit6_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit6_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage3_unit6_bn2_mirror
+Inputs:
+	arg[0]=stage3_unit6_conv1(0)
+	arg[1]=stage3_unit6_bn2_gamma(0) version=0
+	arg[2]=stage3_unit6_bn2_beta(0) version=0
+	arg[3]=stage3_unit6_bn2_moving_mean(0) version=1
+	arg[4]=stage3_unit6_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit6_relu2_mirror
+Inputs:
+	arg[0]=stage3_unit6_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit6_conv2_backward
+Inputs:
+	arg[0]=stage3_unit6_bn3_mirror_backward(0)
+	arg[1]=stage3_unit6_relu2_mirror(0)
+	arg[2]=stage3_unit6_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=256
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit6_conv2
+--------------------
+Op:_backward_Activation, Name=stage3_unit6_relu2_mirror_backward
+Inputs:
+	arg[0]=stage3_unit6_conv2_backward(0)
+	arg[1]=stage3_unit6_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit6_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit6_bn2_mirror_backward
+Inputs:
+	arg[0]=stage3_unit6_relu2_mirror_backward(0)
+	arg[1]=stage3_unit6_bn2_mirror(1)
+	arg[2]=stage3_unit6_bn2_mirror(2)
+	arg[3]=stage3_unit6_conv1(0)
+	arg[4]=stage3_unit6_bn2_gamma(0) version=0
+	arg[5]=stage3_unit6_bn2_beta(0) version=0
+	arg[6]=stage3_unit6_bn2_moving_mean(0) version=1
+	arg[7]=stage3_unit6_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit6_bn2_mirror
+--------------------
+Op:BatchNorm, Name=stage3_unit6_bn1_mirror
+Inputs:
+	arg[0]=elemwise_add_elemwise_add_elemwise_add_elemwise_add_elemwise_add(1)
+	arg[1]=stage3_unit6_bn1_gamma(0) version=0
+	arg[2]=stage3_unit6_bn1_beta(0) version=0
+	arg[3]=stage3_unit6_bn1_moving_mean(0) version=1
+	arg[4]=stage3_unit6_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit6_relu1_mirror
+Inputs:
+	arg[0]=stage3_unit6_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit6_conv1_backward
+Inputs:
+	arg[0]=stage3_unit6_bn2_mirror_backward(0)
+	arg[1]=stage3_unit6_relu1_mirror(0)
+	arg[2]=stage3_unit6_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit6_conv1
+--------------------
+Op:_backward_Activation, Name=stage3_unit6_relu1_mirror_backward
+Inputs:
+	arg[0]=stage3_unit6_conv1_backward(0)
+	arg[1]=stage3_unit6_relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit6_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit6_bn1_mirror_backward
+Inputs:
+	arg[0]=stage3_unit6_relu1_mirror_backward(0)
+	arg[1]=stage3_unit6_bn1_mirror(1)
+	arg[2]=stage3_unit6_bn1_mirror(2)
+	arg[3]=elemwise_add_elemwise_add_elemwise_add_elemwise_add_elemwise_add(1)
+	arg[4]=stage3_unit6_bn1_gamma(0) version=0
+	arg[5]=stage3_unit6_bn1_beta(0) version=0
+	arg[6]=stage3_unit6_bn1_moving_mean(0) version=1
+	arg[7]=stage3_unit6_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit6_bn1_mirror
+--------------------
+Op:add_n, Name=sum_grad
+Inputs:
+	arg[0]=stage4_unit1_bn1_mirror_backward(0)
+	arg[1]=stage3_unit6_bn1_mirror_backward(0)
+Attrs:
+	num_args=2
+--------------------
+Op:BatchNorm, Name=stage3_unit5_bn3_mirror
+Inputs:
+	arg[0]=stage3_unit5_conv2(0)
+	arg[1]=stage3_unit5_bn3_gamma(0) version=0
+	arg[2]=stage3_unit5_bn3_beta(0) version=0
+	arg[3]=stage3_unit5_bn3_moving_mean(0) version=1
+	arg[4]=stage3_unit5_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit5_relu3_mirror
+Inputs:
+	arg[0]=stage3_unit5_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit5_conv3_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage3_unit5_relu3_mirror(0)
+	arg[2]=stage3_unit5_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit5_conv3
+--------------------
+Op:_backward_Activation, Name=stage3_unit5_relu3_mirror_backward
+Inputs:
+	arg[0]=stage3_unit5_conv3_backward(0)
+	arg[1]=stage3_unit5_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit5_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit5_bn3_mirror_backward
+Inputs:
+	arg[0]=stage3_unit5_relu3_mirror_backward(0)
+	arg[1]=stage3_unit5_bn3_mirror(1)
+	arg[2]=stage3_unit5_bn3_mirror(2)
+	arg[3]=stage3_unit5_conv2(0)
+	arg[4]=stage3_unit5_bn3_gamma(0) version=0
+	arg[5]=stage3_unit5_bn3_beta(0) version=0
+	arg[6]=stage3_unit5_bn3_moving_mean(0) version=1
+	arg[7]=stage3_unit5_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit5_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage3_unit5_bn2_mirror
+Inputs:
+	arg[0]=stage3_unit5_conv1(0)
+	arg[1]=stage3_unit5_bn2_gamma(0) version=0
+	arg[2]=stage3_unit5_bn2_beta(0) version=0
+	arg[3]=stage3_unit5_bn2_moving_mean(0) version=1
+	arg[4]=stage3_unit5_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit5_relu2_mirror
+Inputs:
+	arg[0]=stage3_unit5_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit5_conv2_backward
+Inputs:
+	arg[0]=stage3_unit5_bn3_mirror_backward(0)
+	arg[1]=stage3_unit5_relu2_mirror(0)
+	arg[2]=stage3_unit5_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=256
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit5_conv2
+--------------------
+Op:_backward_Activation, Name=stage3_unit5_relu2_mirror_backward
+Inputs:
+	arg[0]=stage3_unit5_conv2_backward(0)
+	arg[1]=stage3_unit5_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit5_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit5_bn2_mirror_backward
+Inputs:
+	arg[0]=stage3_unit5_relu2_mirror_backward(0)
+	arg[1]=stage3_unit5_bn2_mirror(1)
+	arg[2]=stage3_unit5_bn2_mirror(2)
+	arg[3]=stage3_unit5_conv1(0)
+	arg[4]=stage3_unit5_bn2_gamma(0) version=0
+	arg[5]=stage3_unit5_bn2_beta(0) version=0
+	arg[6]=stage3_unit5_bn2_moving_mean(0) version=1
+	arg[7]=stage3_unit5_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit5_bn2_mirror
+--------------------
+Op:BatchNorm, Name=stage3_unit5_bn1_mirror
+Inputs:
+	arg[0]=elemwise_add_elemwise_add_elemwise_add_elemwise_add_elemwise_add(2)
+	arg[1]=stage3_unit5_bn1_gamma(0) version=0
+	arg[2]=stage3_unit5_bn1_beta(0) version=0
+	arg[3]=stage3_unit5_bn1_moving_mean(0) version=1
+	arg[4]=stage3_unit5_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit5_relu1_mirror
+Inputs:
+	arg[0]=stage3_unit5_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit5_conv1_backward
+Inputs:
+	arg[0]=stage3_unit5_bn2_mirror_backward(0)
+	arg[1]=stage3_unit5_relu1_mirror(0)
+	arg[2]=stage3_unit5_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit5_conv1
+--------------------
+Op:_backward_Activation, Name=stage3_unit5_relu1_mirror_backward
+Inputs:
+	arg[0]=stage3_unit5_conv1_backward(0)
+	arg[1]=stage3_unit5_relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit5_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit5_bn1_mirror_backward
+Inputs:
+	arg[0]=stage3_unit5_relu1_mirror_backward(0)
+	arg[1]=stage3_unit5_bn1_mirror(1)
+	arg[2]=stage3_unit5_bn1_mirror(2)
+	arg[3]=elemwise_add_elemwise_add_elemwise_add_elemwise_add_elemwise_add(2)
+	arg[4]=stage3_unit5_bn1_gamma(0) version=0
+	arg[5]=stage3_unit5_bn1_beta(0) version=0
+	arg[6]=stage3_unit5_bn1_moving_mean(0) version=1
+	arg[7]=stage3_unit5_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit5_bn1_mirror
+--------------------
+Op:add_n, Name=sum_grad
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage3_unit5_bn1_mirror_backward(0)
+Attrs:
+	num_args=2
+--------------------
+Op:BatchNorm, Name=stage3_unit4_bn3_mirror
+Inputs:
+	arg[0]=stage3_unit4_conv2(0)
+	arg[1]=stage3_unit4_bn3_gamma(0) version=0
+	arg[2]=stage3_unit4_bn3_beta(0) version=0
+	arg[3]=stage3_unit4_bn3_moving_mean(0) version=1
+	arg[4]=stage3_unit4_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit4_relu3_mirror
+Inputs:
+	arg[0]=stage3_unit4_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit4_conv3_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage3_unit4_relu3_mirror(0)
+	arg[2]=stage3_unit4_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit4_conv3
+--------------------
+Op:_backward_Activation, Name=stage3_unit4_relu3_mirror_backward
+Inputs:
+	arg[0]=stage3_unit4_conv3_backward(0)
+	arg[1]=stage3_unit4_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit4_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit4_bn3_mirror_backward
+Inputs:
+	arg[0]=stage3_unit4_relu3_mirror_backward(0)
+	arg[1]=stage3_unit4_bn3_mirror(1)
+	arg[2]=stage3_unit4_bn3_mirror(2)
+	arg[3]=stage3_unit4_conv2(0)
+	arg[4]=stage3_unit4_bn3_gamma(0) version=0
+	arg[5]=stage3_unit4_bn3_beta(0) version=0
+	arg[6]=stage3_unit4_bn3_moving_mean(0) version=1
+	arg[7]=stage3_unit4_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit4_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage3_unit4_bn2_mirror
+Inputs:
+	arg[0]=stage3_unit4_conv1(0)
+	arg[1]=stage3_unit4_bn2_gamma(0) version=0
+	arg[2]=stage3_unit4_bn2_beta(0) version=0
+	arg[3]=stage3_unit4_bn2_moving_mean(0) version=1
+	arg[4]=stage3_unit4_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit4_relu2_mirror
+Inputs:
+	arg[0]=stage3_unit4_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit4_conv2_backward
+Inputs:
+	arg[0]=stage3_unit4_bn3_mirror_backward(0)
+	arg[1]=stage3_unit4_relu2_mirror(0)
+	arg[2]=stage3_unit4_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=256
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit4_conv2
+--------------------
+Op:_backward_Activation, Name=stage3_unit4_relu2_mirror_backward
+Inputs:
+	arg[0]=stage3_unit4_conv2_backward(0)
+	arg[1]=stage3_unit4_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit4_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit4_bn2_mirror_backward
+Inputs:
+	arg[0]=stage3_unit4_relu2_mirror_backward(0)
+	arg[1]=stage3_unit4_bn2_mirror(1)
+	arg[2]=stage3_unit4_bn2_mirror(2)
+	arg[3]=stage3_unit4_conv1(0)
+	arg[4]=stage3_unit4_bn2_gamma(0) version=0
+	arg[5]=stage3_unit4_bn2_beta(0) version=0
+	arg[6]=stage3_unit4_bn2_moving_mean(0) version=1
+	arg[7]=stage3_unit4_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit4_bn2_mirror
+--------------------
+Op:BatchNorm, Name=stage3_unit4_bn1_mirror
+Inputs:
+	arg[0]=elemwise_add_elemwise_add_elemwise_add_elemwise_add_elemwise_add(3)
+	arg[1]=stage3_unit4_bn1_gamma(0) version=0
+	arg[2]=stage3_unit4_bn1_beta(0) version=0
+	arg[3]=stage3_unit4_bn1_moving_mean(0) version=1
+	arg[4]=stage3_unit4_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit4_relu1_mirror
+Inputs:
+	arg[0]=stage3_unit4_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit4_conv1_backward
+Inputs:
+	arg[0]=stage3_unit4_bn2_mirror_backward(0)
+	arg[1]=stage3_unit4_relu1_mirror(0)
+	arg[2]=stage3_unit4_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit4_conv1
+--------------------
+Op:_backward_Activation, Name=stage3_unit4_relu1_mirror_backward
+Inputs:
+	arg[0]=stage3_unit4_conv1_backward(0)
+	arg[1]=stage3_unit4_relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit4_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit4_bn1_mirror_backward
+Inputs:
+	arg[0]=stage3_unit4_relu1_mirror_backward(0)
+	arg[1]=stage3_unit4_bn1_mirror(1)
+	arg[2]=stage3_unit4_bn1_mirror(2)
+	arg[3]=elemwise_add_elemwise_add_elemwise_add_elemwise_add_elemwise_add(3)
+	arg[4]=stage3_unit4_bn1_gamma(0) version=0
+	arg[5]=stage3_unit4_bn1_beta(0) version=0
+	arg[6]=stage3_unit4_bn1_moving_mean(0) version=1
+	arg[7]=stage3_unit4_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit4_bn1_mirror
+--------------------
+Op:add_n, Name=sum_grad
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage3_unit4_bn1_mirror_backward(0)
+Attrs:
+	num_args=2
+--------------------
+Op:BatchNorm, Name=stage3_unit3_bn3_mirror
+Inputs:
+	arg[0]=stage3_unit3_conv2(0)
+	arg[1]=stage3_unit3_bn3_gamma(0) version=0
+	arg[2]=stage3_unit3_bn3_beta(0) version=0
+	arg[3]=stage3_unit3_bn3_moving_mean(0) version=1
+	arg[4]=stage3_unit3_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit3_relu3_mirror
+Inputs:
+	arg[0]=stage3_unit3_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit3_conv3_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage3_unit3_relu3_mirror(0)
+	arg[2]=stage3_unit3_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit3_conv3
+--------------------
+Op:_backward_Activation, Name=stage3_unit3_relu3_mirror_backward
+Inputs:
+	arg[0]=stage3_unit3_conv3_backward(0)
+	arg[1]=stage3_unit3_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit3_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit3_bn3_mirror_backward
+Inputs:
+	arg[0]=stage3_unit3_relu3_mirror_backward(0)
+	arg[1]=stage3_unit3_bn3_mirror(1)
+	arg[2]=stage3_unit3_bn3_mirror(2)
+	arg[3]=stage3_unit3_conv2(0)
+	arg[4]=stage3_unit3_bn3_gamma(0) version=0
+	arg[5]=stage3_unit3_bn3_beta(0) version=0
+	arg[6]=stage3_unit3_bn3_moving_mean(0) version=1
+	arg[7]=stage3_unit3_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit3_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage3_unit3_bn2_mirror
+Inputs:
+	arg[0]=stage3_unit3_conv1(0)
+	arg[1]=stage3_unit3_bn2_gamma(0) version=0
+	arg[2]=stage3_unit3_bn2_beta(0) version=0
+	arg[3]=stage3_unit3_bn2_moving_mean(0) version=1
+	arg[4]=stage3_unit3_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit3_relu2_mirror
+Inputs:
+	arg[0]=stage3_unit3_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit3_conv2_backward
+Inputs:
+	arg[0]=stage3_unit3_bn3_mirror_backward(0)
+	arg[1]=stage3_unit3_relu2_mirror(0)
+	arg[2]=stage3_unit3_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=256
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit3_conv2
+--------------------
+Op:_backward_Activation, Name=stage3_unit3_relu2_mirror_backward
+Inputs:
+	arg[0]=stage3_unit3_conv2_backward(0)
+	arg[1]=stage3_unit3_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit3_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit3_bn2_mirror_backward
+Inputs:
+	arg[0]=stage3_unit3_relu2_mirror_backward(0)
+	arg[1]=stage3_unit3_bn2_mirror(1)
+	arg[2]=stage3_unit3_bn2_mirror(2)
+	arg[3]=stage3_unit3_conv1(0)
+	arg[4]=stage3_unit3_bn2_gamma(0) version=0
+	arg[5]=stage3_unit3_bn2_beta(0) version=0
+	arg[6]=stage3_unit3_bn2_moving_mean(0) version=1
+	arg[7]=stage3_unit3_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit3_bn2_mirror
+--------------------
+Op:BatchNorm, Name=stage3_unit3_bn1_mirror
+Inputs:
+	arg[0]=elemwise_add_elemwise_add_elemwise_add_elemwise_add_elemwise_add(4)
+	arg[1]=stage3_unit3_bn1_gamma(0) version=0
+	arg[2]=stage3_unit3_bn1_beta(0) version=0
+	arg[3]=stage3_unit3_bn1_moving_mean(0) version=1
+	arg[4]=stage3_unit3_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit3_relu1_mirror
+Inputs:
+	arg[0]=stage3_unit3_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit3_conv1_backward
+Inputs:
+	arg[0]=stage3_unit3_bn2_mirror_backward(0)
+	arg[1]=stage3_unit3_relu1_mirror(0)
+	arg[2]=stage3_unit3_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit3_conv1
+--------------------
+Op:_backward_Activation, Name=stage3_unit3_relu1_mirror_backward
+Inputs:
+	arg[0]=stage3_unit3_conv1_backward(0)
+	arg[1]=stage3_unit3_relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit3_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit3_bn1_mirror_backward
+Inputs:
+	arg[0]=stage3_unit3_relu1_mirror_backward(0)
+	arg[1]=stage3_unit3_bn1_mirror(1)
+	arg[2]=stage3_unit3_bn1_mirror(2)
+	arg[3]=elemwise_add_elemwise_add_elemwise_add_elemwise_add_elemwise_add(4)
+	arg[4]=stage3_unit3_bn1_gamma(0) version=0
+	arg[5]=stage3_unit3_bn1_beta(0) version=0
+	arg[6]=stage3_unit3_bn1_moving_mean(0) version=1
+	arg[7]=stage3_unit3_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit3_bn1_mirror
+--------------------
+Op:add_n, Name=sum_grad
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage3_unit3_bn1_mirror_backward(0)
+Attrs:
+	num_args=2
+--------------------
+Op:BatchNorm, Name=stage3_unit2_bn3_mirror
+Inputs:
+	arg[0]=stage3_unit2_conv2(0)
+	arg[1]=stage3_unit2_bn3_gamma(0) version=0
+	arg[2]=stage3_unit2_bn3_beta(0) version=0
+	arg[3]=stage3_unit2_bn3_moving_mean(0) version=1
+	arg[4]=stage3_unit2_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit2_relu3_mirror
+Inputs:
+	arg[0]=stage3_unit2_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit2_conv3_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage3_unit2_relu3_mirror(0)
+	arg[2]=stage3_unit2_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit2_conv3
+--------------------
+Op:_backward_Activation, Name=stage3_unit2_relu3_mirror_backward
+Inputs:
+	arg[0]=stage3_unit2_conv3_backward(0)
+	arg[1]=stage3_unit2_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit2_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit2_bn3_mirror_backward
+Inputs:
+	arg[0]=stage3_unit2_relu3_mirror_backward(0)
+	arg[1]=stage3_unit2_bn3_mirror(1)
+	arg[2]=stage3_unit2_bn3_mirror(2)
+	arg[3]=stage3_unit2_conv2(0)
+	arg[4]=stage3_unit2_bn3_gamma(0) version=0
+	arg[5]=stage3_unit2_bn3_beta(0) version=0
+	arg[6]=stage3_unit2_bn3_moving_mean(0) version=1
+	arg[7]=stage3_unit2_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit2_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage3_unit2_bn2_mirror
+Inputs:
+	arg[0]=stage3_unit2_conv1(0)
+	arg[1]=stage3_unit2_bn2_gamma(0) version=0
+	arg[2]=stage3_unit2_bn2_beta(0) version=0
+	arg[3]=stage3_unit2_bn2_moving_mean(0) version=1
+	arg[4]=stage3_unit2_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit2_relu2_mirror
+Inputs:
+	arg[0]=stage3_unit2_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit2_conv2_backward
+Inputs:
+	arg[0]=stage3_unit2_bn3_mirror_backward(0)
+	arg[1]=stage3_unit2_relu2_mirror(0)
+	arg[2]=stage3_unit2_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=256
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit2_conv2
+--------------------
+Op:_backward_Activation, Name=stage3_unit2_relu2_mirror_backward
+Inputs:
+	arg[0]=stage3_unit2_conv2_backward(0)
+	arg[1]=stage3_unit2_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit2_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit2_bn2_mirror_backward
+Inputs:
+	arg[0]=stage3_unit2_relu2_mirror_backward(0)
+	arg[1]=stage3_unit2_bn2_mirror(1)
+	arg[2]=stage3_unit2_bn2_mirror(2)
+	arg[3]=stage3_unit2_conv1(0)
+	arg[4]=stage3_unit2_bn2_gamma(0) version=0
+	arg[5]=stage3_unit2_bn2_beta(0) version=0
+	arg[6]=stage3_unit2_bn2_moving_mean(0) version=1
+	arg[7]=stage3_unit2_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit2_bn2_mirror
+--------------------
+Op:BatchNorm, Name=stage3_unit2_bn1_mirror
+Inputs:
+	arg[0]=_plus7(0)
+	arg[1]=stage3_unit2_bn1_gamma(0) version=0
+	arg[2]=stage3_unit2_bn1_beta(0) version=0
+	arg[3]=stage3_unit2_bn1_moving_mean(0) version=1
+	arg[4]=stage3_unit2_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit2_relu1_mirror
+Inputs:
+	arg[0]=stage3_unit2_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit2_conv1_backward
+Inputs:
+	arg[0]=stage3_unit2_bn2_mirror_backward(0)
+	arg[1]=stage3_unit2_relu1_mirror(0)
+	arg[2]=stage3_unit2_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit2_conv1
+--------------------
+Op:_backward_Activation, Name=stage3_unit2_relu1_mirror_backward
+Inputs:
+	arg[0]=stage3_unit2_conv1_backward(0)
+	arg[1]=stage3_unit2_relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit2_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit2_bn1_mirror_backward
+Inputs:
+	arg[0]=stage3_unit2_relu1_mirror_backward(0)
+	arg[1]=stage3_unit2_bn1_mirror(1)
+	arg[2]=stage3_unit2_bn1_mirror(2)
+	arg[3]=_plus7(0)
+	arg[4]=stage3_unit2_bn1_gamma(0) version=0
+	arg[5]=stage3_unit2_bn1_beta(0) version=0
+	arg[6]=stage3_unit2_bn1_moving_mean(0) version=1
+	arg[7]=stage3_unit2_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit2_bn1_mirror
+--------------------
+Op:add_n, Name=sum_grad
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage3_unit2_bn1_mirror_backward(0)
+Attrs:
+	num_args=2
+--------------------
+Op:_FusedOp, Name=elemwise_add_elemwise_add_elemwise_add
+Inputs:
+	arg[0]=stage2_unit4_conv3(0)
+	arg[1]=stage2_unit3_conv3(0)
+	arg[2]=stage2_unit2_conv3(0)
+	arg[3]=_plus3(0)
+Attrs:
+	num_inputs=4
+	num_outputs=3
+--------------------
+Op:BatchNorm, Name=stage3_unit1_bn1_mirror
+Inputs:
+	arg[0]=elemwise_add_elemwise_add_elemwise_add(0)
+	arg[1]=stage3_unit1_bn1_gamma(0) version=0
+	arg[2]=stage3_unit1_bn1_beta(0) version=0
+	arg[3]=stage3_unit1_bn1_moving_mean(0) version=1
+	arg[4]=stage3_unit1_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit1_relu1_mirror
+Inputs:
+	arg[0]=stage3_unit1_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit1_sc_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage3_unit1_relu1_mirror(0)
+	arg[2]=stage3_unit1_sc_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	stride=(2, 2)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit1_sc
+--------------------
+Op:BatchNorm, Name=stage3_unit1_bn3_mirror
+Inputs:
+	arg[0]=stage3_unit1_conv2(0)
+	arg[1]=stage3_unit1_bn3_gamma(0) version=0
+	arg[2]=stage3_unit1_bn3_beta(0) version=0
+	arg[3]=stage3_unit1_bn3_moving_mean(0) version=1
+	arg[4]=stage3_unit1_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit1_relu3_mirror
+Inputs:
+	arg[0]=stage3_unit1_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit1_conv3_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage3_unit1_relu3_mirror(0)
+	arg[2]=stage3_unit1_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=1024
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit1_conv3
+--------------------
+Op:_backward_Activation, Name=stage3_unit1_relu3_mirror_backward
+Inputs:
+	arg[0]=stage3_unit1_conv3_backward(0)
+	arg[1]=stage3_unit1_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit1_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit1_bn3_mirror_backward
+Inputs:
+	arg[0]=stage3_unit1_relu3_mirror_backward(0)
+	arg[1]=stage3_unit1_bn3_mirror(1)
+	arg[2]=stage3_unit1_bn3_mirror(2)
+	arg[3]=stage3_unit1_conv2(0)
+	arg[4]=stage3_unit1_bn3_gamma(0) version=0
+	arg[5]=stage3_unit1_bn3_beta(0) version=0
+	arg[6]=stage3_unit1_bn3_moving_mean(0) version=1
+	arg[7]=stage3_unit1_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit1_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage3_unit1_bn2_mirror
+Inputs:
+	arg[0]=stage3_unit1_conv1(0)
+	arg[1]=stage3_unit1_bn2_gamma(0) version=0
+	arg[2]=stage3_unit1_bn2_beta(0) version=0
+	arg[3]=stage3_unit1_bn2_moving_mean(0) version=1
+	arg[4]=stage3_unit1_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage3_unit1_relu2_mirror
+Inputs:
+	arg[0]=stage3_unit1_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage3_unit1_conv2_backward
+Inputs:
+	arg[0]=stage3_unit1_bn3_mirror_backward(0)
+	arg[1]=stage3_unit1_relu2_mirror(0)
+	arg[2]=stage3_unit1_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=256
+	pad=(1, 1)
+	stride=(2, 2)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit1_conv2
+--------------------
+Op:_backward_Activation, Name=stage3_unit1_relu2_mirror_backward
+Inputs:
+	arg[0]=stage3_unit1_conv2_backward(0)
+	arg[1]=stage3_unit1_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage3_unit1_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit1_bn2_mirror_backward
+Inputs:
+	arg[0]=stage3_unit1_relu2_mirror_backward(0)
+	arg[1]=stage3_unit1_bn2_mirror(1)
+	arg[2]=stage3_unit1_bn2_mirror(2)
+	arg[3]=stage3_unit1_conv1(0)
+	arg[4]=stage3_unit1_bn2_gamma(0) version=0
+	arg[5]=stage3_unit1_bn2_beta(0) version=0
+	arg[6]=stage3_unit1_bn2_moving_mean(0) version=1
+	arg[7]=stage3_unit1_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit1_bn2_mirror
+--------------------
+Op:_backward_Convolution, Name=stage3_unit1_conv1_backward
+Inputs:
+	arg[0]=stage3_unit1_bn2_mirror_backward(0)
+	arg[1]=stage3_unit1_relu1_mirror(0)
+	arg[2]=stage3_unit1_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage3_unit1_conv1
+--------------------
+Op:_FusedOp, Name=add_n__FusedOpOutHelper__backward_Activation
+Inputs:
+	arg[0]=stage3_unit1_sc_backward(0)
+	arg[1]=stage3_unit1_conv1_backward(0)
+	arg[2]=stage3_unit1_relu1_mirror(0)
+Attrs:
+	num_inputs=3
+	num_outputs=1
+Control deps:
+	cdep[0]=stage3_unit1_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage3_unit1_bn1_mirror_backward
+Inputs:
+	arg[0]=add_n__FusedOpOutHelper__backward_Activation(0)
+	arg[1]=stage3_unit1_bn1_mirror(1)
+	arg[2]=stage3_unit1_bn1_mirror(2)
+	arg[3]=elemwise_add_elemwise_add_elemwise_add(0)
+	arg[4]=stage3_unit1_bn1_gamma(0) version=0
+	arg[5]=stage3_unit1_bn1_beta(0) version=0
+	arg[6]=stage3_unit1_bn1_moving_mean(0) version=1
+	arg[7]=stage3_unit1_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage3_unit1_bn1_mirror
+--------------------
+Op:BatchNorm, Name=stage2_unit4_bn3_mirror
+Inputs:
+	arg[0]=stage2_unit4_conv2(0)
+	arg[1]=stage2_unit4_bn3_gamma(0) version=0
+	arg[2]=stage2_unit4_bn3_beta(0) version=0
+	arg[3]=stage2_unit4_bn3_moving_mean(0) version=1
+	arg[4]=stage2_unit4_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit4_relu3_mirror
+Inputs:
+	arg[0]=stage2_unit4_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage2_unit4_conv3_backward
+Inputs:
+	arg[0]=stage3_unit1_bn1_mirror_backward(0)
+	arg[1]=stage2_unit4_relu3_mirror(0)
+	arg[2]=stage2_unit4_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage2_unit4_conv3
+--------------------
+Op:_backward_Activation, Name=stage2_unit4_relu3_mirror_backward
+Inputs:
+	arg[0]=stage2_unit4_conv3_backward(0)
+	arg[1]=stage2_unit4_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage2_unit4_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage2_unit4_bn3_mirror_backward
+Inputs:
+	arg[0]=stage2_unit4_relu3_mirror_backward(0)
+	arg[1]=stage2_unit4_bn3_mirror(1)
+	arg[2]=stage2_unit4_bn3_mirror(2)
+	arg[3]=stage2_unit4_conv2(0)
+	arg[4]=stage2_unit4_bn3_gamma(0) version=0
+	arg[5]=stage2_unit4_bn3_beta(0) version=0
+	arg[6]=stage2_unit4_bn3_moving_mean(0) version=1
+	arg[7]=stage2_unit4_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage2_unit4_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage2_unit4_bn2_mirror
+Inputs:
+	arg[0]=stage2_unit4_conv1(0)
+	arg[1]=stage2_unit4_bn2_gamma(0) version=0
+	arg[2]=stage2_unit4_bn2_beta(0) version=0
+	arg[3]=stage2_unit4_bn2_moving_mean(0) version=1
+	arg[4]=stage2_unit4_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit4_relu2_mirror
+Inputs:
+	arg[0]=stage2_unit4_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage2_unit4_conv2_backward
+Inputs:
+	arg[0]=stage2_unit4_bn3_mirror_backward(0)
+	arg[1]=stage2_unit4_relu2_mirror(0)
+	arg[2]=stage2_unit4_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=128
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage2_unit4_conv2
+--------------------
+Op:_backward_Activation, Name=stage2_unit4_relu2_mirror_backward
+Inputs:
+	arg[0]=stage2_unit4_conv2_backward(0)
+	arg[1]=stage2_unit4_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage2_unit4_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage2_unit4_bn2_mirror_backward
+Inputs:
+	arg[0]=stage2_unit4_relu2_mirror_backward(0)
+	arg[1]=stage2_unit4_bn2_mirror(1)
+	arg[2]=stage2_unit4_bn2_mirror(2)
+	arg[3]=stage2_unit4_conv1(0)
+	arg[4]=stage2_unit4_bn2_gamma(0) version=0
+	arg[5]=stage2_unit4_bn2_beta(0) version=0
+	arg[6]=stage2_unit4_bn2_moving_mean(0) version=1
+	arg[7]=stage2_unit4_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage2_unit4_bn2_mirror
+--------------------
+Op:BatchNorm, Name=stage2_unit4_bn1_mirror
+Inputs:
+	arg[0]=elemwise_add_elemwise_add_elemwise_add(1)
+	arg[1]=stage2_unit4_bn1_gamma(0) version=0
+	arg[2]=stage2_unit4_bn1_beta(0) version=0
+	arg[3]=stage2_unit4_bn1_moving_mean(0) version=1
+	arg[4]=stage2_unit4_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit4_relu1_mirror
+Inputs:
+	arg[0]=stage2_unit4_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage2_unit4_conv1_backward
+Inputs:
+	arg[0]=stage2_unit4_bn2_mirror_backward(0)
+	arg[1]=stage2_unit4_relu1_mirror(0)
+	arg[2]=stage2_unit4_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=128
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage2_unit4_conv1
+--------------------
+Op:_backward_Activation, Name=stage2_unit4_relu1_mirror_backward
+Inputs:
+	arg[0]=stage2_unit4_conv1_backward(0)
+	arg[1]=stage2_unit4_relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage2_unit4_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage2_unit4_bn1_mirror_backward
+Inputs:
+	arg[0]=stage2_unit4_relu1_mirror_backward(0)
+	arg[1]=stage2_unit4_bn1_mirror(1)
+	arg[2]=stage2_unit4_bn1_mirror(2)
+	arg[3]=elemwise_add_elemwise_add_elemwise_add(1)
+	arg[4]=stage2_unit4_bn1_gamma(0) version=0
+	arg[5]=stage2_unit4_bn1_beta(0) version=0
+	arg[6]=stage2_unit4_bn1_moving_mean(0) version=1
+	arg[7]=stage2_unit4_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage2_unit4_bn1_mirror
+--------------------
+Op:add_n, Name=sum_grad
+Inputs:
+	arg[0]=stage3_unit1_bn1_mirror_backward(0)
+	arg[1]=stage2_unit4_bn1_mirror_backward(0)
+Attrs:
+	num_args=2
+--------------------
+Op:BatchNorm, Name=stage2_unit3_bn3_mirror
+Inputs:
+	arg[0]=stage2_unit3_conv2(0)
+	arg[1]=stage2_unit3_bn3_gamma(0) version=0
+	arg[2]=stage2_unit3_bn3_beta(0) version=0
+	arg[3]=stage2_unit3_bn3_moving_mean(0) version=1
+	arg[4]=stage2_unit3_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit3_relu3_mirror
+Inputs:
+	arg[0]=stage2_unit3_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage2_unit3_conv3_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage2_unit3_relu3_mirror(0)
+	arg[2]=stage2_unit3_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage2_unit3_conv3
+--------------------
+Op:_backward_Activation, Name=stage2_unit3_relu3_mirror_backward
+Inputs:
+	arg[0]=stage2_unit3_conv3_backward(0)
+	arg[1]=stage2_unit3_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage2_unit3_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage2_unit3_bn3_mirror_backward
+Inputs:
+	arg[0]=stage2_unit3_relu3_mirror_backward(0)
+	arg[1]=stage2_unit3_bn3_mirror(1)
+	arg[2]=stage2_unit3_bn3_mirror(2)
+	arg[3]=stage2_unit3_conv2(0)
+	arg[4]=stage2_unit3_bn3_gamma(0) version=0
+	arg[5]=stage2_unit3_bn3_beta(0) version=0
+	arg[6]=stage2_unit3_bn3_moving_mean(0) version=1
+	arg[7]=stage2_unit3_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage2_unit3_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage2_unit3_bn2_mirror
+Inputs:
+	arg[0]=stage2_unit3_conv1(0)
+	arg[1]=stage2_unit3_bn2_gamma(0) version=0
+	arg[2]=stage2_unit3_bn2_beta(0) version=0
+	arg[3]=stage2_unit3_bn2_moving_mean(0) version=1
+	arg[4]=stage2_unit3_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit3_relu2_mirror
+Inputs:
+	arg[0]=stage2_unit3_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage2_unit3_conv2_backward
+Inputs:
+	arg[0]=stage2_unit3_bn3_mirror_backward(0)
+	arg[1]=stage2_unit3_relu2_mirror(0)
+	arg[2]=stage2_unit3_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=128
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage2_unit3_conv2
+--------------------
+Op:_backward_Activation, Name=stage2_unit3_relu2_mirror_backward
+Inputs:
+	arg[0]=stage2_unit3_conv2_backward(0)
+	arg[1]=stage2_unit3_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage2_unit3_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage2_unit3_bn2_mirror_backward
+Inputs:
+	arg[0]=stage2_unit3_relu2_mirror_backward(0)
+	arg[1]=stage2_unit3_bn2_mirror(1)
+	arg[2]=stage2_unit3_bn2_mirror(2)
+	arg[3]=stage2_unit3_conv1(0)
+	arg[4]=stage2_unit3_bn2_gamma(0) version=0
+	arg[5]=stage2_unit3_bn2_beta(0) version=0
+	arg[6]=stage2_unit3_bn2_moving_mean(0) version=1
+	arg[7]=stage2_unit3_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage2_unit3_bn2_mirror
+--------------------
+Op:BatchNorm, Name=stage2_unit3_bn1_mirror
+Inputs:
+	arg[0]=elemwise_add_elemwise_add_elemwise_add(2)
+	arg[1]=stage2_unit3_bn1_gamma(0) version=0
+	arg[2]=stage2_unit3_bn1_beta(0) version=0
+	arg[3]=stage2_unit3_bn1_moving_mean(0) version=1
+	arg[4]=stage2_unit3_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit3_relu1_mirror
+Inputs:
+	arg[0]=stage2_unit3_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage2_unit3_conv1_backward
+Inputs:
+	arg[0]=stage2_unit3_bn2_mirror_backward(0)
+	arg[1]=stage2_unit3_relu1_mirror(0)
+	arg[2]=stage2_unit3_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=128
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage2_unit3_conv1
+--------------------
+Op:_backward_Activation, Name=stage2_unit3_relu1_mirror_backward
+Inputs:
+	arg[0]=stage2_unit3_conv1_backward(0)
+	arg[1]=stage2_unit3_relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage2_unit3_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage2_unit3_bn1_mirror_backward
+Inputs:
+	arg[0]=stage2_unit3_relu1_mirror_backward(0)
+	arg[1]=stage2_unit3_bn1_mirror(1)
+	arg[2]=stage2_unit3_bn1_mirror(2)
+	arg[3]=elemwise_add_elemwise_add_elemwise_add(2)
+	arg[4]=stage2_unit3_bn1_gamma(0) version=0
+	arg[5]=stage2_unit3_bn1_beta(0) version=0
+	arg[6]=stage2_unit3_bn1_moving_mean(0) version=1
+	arg[7]=stage2_unit3_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage2_unit3_bn1_mirror
+--------------------
+Op:add_n, Name=sum_grad
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage2_unit3_bn1_mirror_backward(0)
+Attrs:
+	num_args=2
+--------------------
+Op:BatchNorm, Name=stage2_unit2_bn3_mirror
+Inputs:
+	arg[0]=stage2_unit2_conv2(0)
+	arg[1]=stage2_unit2_bn3_gamma(0) version=0
+	arg[2]=stage2_unit2_bn3_beta(0) version=0
+	arg[3]=stage2_unit2_bn3_moving_mean(0) version=1
+	arg[4]=stage2_unit2_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit2_relu3_mirror
+Inputs:
+	arg[0]=stage2_unit2_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage2_unit2_conv3_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage2_unit2_relu3_mirror(0)
+	arg[2]=stage2_unit2_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage2_unit2_conv3
+--------------------
+Op:_backward_Activation, Name=stage2_unit2_relu3_mirror_backward
+Inputs:
+	arg[0]=stage2_unit2_conv3_backward(0)
+	arg[1]=stage2_unit2_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage2_unit2_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage2_unit2_bn3_mirror_backward
+Inputs:
+	arg[0]=stage2_unit2_relu3_mirror_backward(0)
+	arg[1]=stage2_unit2_bn3_mirror(1)
+	arg[2]=stage2_unit2_bn3_mirror(2)
+	arg[3]=stage2_unit2_conv2(0)
+	arg[4]=stage2_unit2_bn3_gamma(0) version=0
+	arg[5]=stage2_unit2_bn3_beta(0) version=0
+	arg[6]=stage2_unit2_bn3_moving_mean(0) version=1
+	arg[7]=stage2_unit2_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage2_unit2_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage2_unit2_bn2_mirror
+Inputs:
+	arg[0]=stage2_unit2_conv1(0)
+	arg[1]=stage2_unit2_bn2_gamma(0) version=0
+	arg[2]=stage2_unit2_bn2_beta(0) version=0
+	arg[3]=stage2_unit2_bn2_moving_mean(0) version=1
+	arg[4]=stage2_unit2_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit2_relu2_mirror
+Inputs:
+	arg[0]=stage2_unit2_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage2_unit2_conv2_backward
+Inputs:
+	arg[0]=stage2_unit2_bn3_mirror_backward(0)
+	arg[1]=stage2_unit2_relu2_mirror(0)
+	arg[2]=stage2_unit2_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=128
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage2_unit2_conv2
+--------------------
+Op:_backward_Activation, Name=stage2_unit2_relu2_mirror_backward
+Inputs:
+	arg[0]=stage2_unit2_conv2_backward(0)
+	arg[1]=stage2_unit2_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage2_unit2_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage2_unit2_bn2_mirror_backward
+Inputs:
+	arg[0]=stage2_unit2_relu2_mirror_backward(0)
+	arg[1]=stage2_unit2_bn2_mirror(1)
+	arg[2]=stage2_unit2_bn2_mirror(2)
+	arg[3]=stage2_unit2_conv1(0)
+	arg[4]=stage2_unit2_bn2_gamma(0) version=0
+	arg[5]=stage2_unit2_bn2_beta(0) version=0
+	arg[6]=stage2_unit2_bn2_moving_mean(0) version=1
+	arg[7]=stage2_unit2_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage2_unit2_bn2_mirror
+--------------------
+Op:BatchNorm, Name=stage2_unit2_bn1_mirror
+Inputs:
+	arg[0]=_plus3(0)
+	arg[1]=stage2_unit2_bn1_gamma(0) version=0
+	arg[2]=stage2_unit2_bn1_beta(0) version=0
+	arg[3]=stage2_unit2_bn1_moving_mean(0) version=1
+	arg[4]=stage2_unit2_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit2_relu1_mirror
+Inputs:
+	arg[0]=stage2_unit2_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage2_unit2_conv1_backward
+Inputs:
+	arg[0]=stage2_unit2_bn2_mirror_backward(0)
+	arg[1]=stage2_unit2_relu1_mirror(0)
+	arg[2]=stage2_unit2_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=128
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage2_unit2_conv1
+--------------------
+Op:_backward_Activation, Name=stage2_unit2_relu1_mirror_backward
+Inputs:
+	arg[0]=stage2_unit2_conv1_backward(0)
+	arg[1]=stage2_unit2_relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage2_unit2_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage2_unit2_bn1_mirror_backward
+Inputs:
+	arg[0]=stage2_unit2_relu1_mirror_backward(0)
+	arg[1]=stage2_unit2_bn1_mirror(1)
+	arg[2]=stage2_unit2_bn1_mirror(2)
+	arg[3]=_plus3(0)
+	arg[4]=stage2_unit2_bn1_gamma(0) version=0
+	arg[5]=stage2_unit2_bn1_beta(0) version=0
+	arg[6]=stage2_unit2_bn1_moving_mean(0) version=1
+	arg[7]=stage2_unit2_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage2_unit2_bn1_mirror
+--------------------
+Op:add_n, Name=sum_grad
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage2_unit2_bn1_mirror_backward(0)
+Attrs:
+	num_args=2
+--------------------
+Op:_FusedOp, Name=elemwise_add_elemwise_add
+Inputs:
+	arg[0]=stage1_unit3_conv3(0)
+	arg[1]=stage1_unit2_conv3(0)
+	arg[2]=_plus0(0)
+Attrs:
+	num_inputs=3
+	num_outputs=2
+--------------------
+Op:BatchNorm, Name=stage2_unit1_bn1_mirror
+Inputs:
+	arg[0]=elemwise_add_elemwise_add(0)
+	arg[1]=stage2_unit1_bn1_gamma(0) version=0
+	arg[2]=stage2_unit1_bn1_beta(0) version=0
+	arg[3]=stage2_unit1_bn1_moving_mean(0) version=1
+	arg[4]=stage2_unit1_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit1_relu1_mirror
+Inputs:
+	arg[0]=stage2_unit1_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage2_unit1_sc_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage2_unit1_relu1_mirror(0)
+	arg[2]=stage2_unit1_sc_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	stride=(2, 2)
+	workspace=256
+Control deps:
+	cdep[0]=stage2_unit1_sc
+--------------------
+Op:BatchNorm, Name=stage2_unit1_bn3_mirror
+Inputs:
+	arg[0]=stage2_unit1_conv2(0)
+	arg[1]=stage2_unit1_bn3_gamma(0) version=0
+	arg[2]=stage2_unit1_bn3_beta(0) version=0
+	arg[3]=stage2_unit1_bn3_moving_mean(0) version=1
+	arg[4]=stage2_unit1_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit1_relu3_mirror
+Inputs:
+	arg[0]=stage2_unit1_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage2_unit1_conv3_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage2_unit1_relu3_mirror(0)
+	arg[2]=stage2_unit1_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=512
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage2_unit1_conv3
+--------------------
+Op:_backward_Activation, Name=stage2_unit1_relu3_mirror_backward
+Inputs:
+	arg[0]=stage2_unit1_conv3_backward(0)
+	arg[1]=stage2_unit1_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage2_unit1_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage2_unit1_bn3_mirror_backward
+Inputs:
+	arg[0]=stage2_unit1_relu3_mirror_backward(0)
+	arg[1]=stage2_unit1_bn3_mirror(1)
+	arg[2]=stage2_unit1_bn3_mirror(2)
+	arg[3]=stage2_unit1_conv2(0)
+	arg[4]=stage2_unit1_bn3_gamma(0) version=0
+	arg[5]=stage2_unit1_bn3_beta(0) version=0
+	arg[6]=stage2_unit1_bn3_moving_mean(0) version=1
+	arg[7]=stage2_unit1_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage2_unit1_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage2_unit1_bn2_mirror
+Inputs:
+	arg[0]=stage2_unit1_conv1(0)
+	arg[1]=stage2_unit1_bn2_gamma(0) version=0
+	arg[2]=stage2_unit1_bn2_beta(0) version=0
+	arg[3]=stage2_unit1_bn2_moving_mean(0) version=1
+	arg[4]=stage2_unit1_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage2_unit1_relu2_mirror
+Inputs:
+	arg[0]=stage2_unit1_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage2_unit1_conv2_backward
+Inputs:
+	arg[0]=stage2_unit1_bn3_mirror_backward(0)
+	arg[1]=stage2_unit1_relu2_mirror(0)
+	arg[2]=stage2_unit1_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=128
+	pad=(1, 1)
+	stride=(2, 2)
+	workspace=256
+Control deps:
+	cdep[0]=stage2_unit1_conv2
+--------------------
+Op:_backward_Activation, Name=stage2_unit1_relu2_mirror_backward
+Inputs:
+	arg[0]=stage2_unit1_conv2_backward(0)
+	arg[1]=stage2_unit1_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage2_unit1_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage2_unit1_bn2_mirror_backward
+Inputs:
+	arg[0]=stage2_unit1_relu2_mirror_backward(0)
+	arg[1]=stage2_unit1_bn2_mirror(1)
+	arg[2]=stage2_unit1_bn2_mirror(2)
+	arg[3]=stage2_unit1_conv1(0)
+	arg[4]=stage2_unit1_bn2_gamma(0) version=0
+	arg[5]=stage2_unit1_bn2_beta(0) version=0
+	arg[6]=stage2_unit1_bn2_moving_mean(0) version=1
+	arg[7]=stage2_unit1_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage2_unit1_bn2_mirror
+--------------------
+Op:_backward_Convolution, Name=stage2_unit1_conv1_backward
+Inputs:
+	arg[0]=stage2_unit1_bn2_mirror_backward(0)
+	arg[1]=stage2_unit1_relu1_mirror(0)
+	arg[2]=stage2_unit1_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=128
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage2_unit1_conv1
+--------------------
+Op:_FusedOp, Name=add_n__FusedOpOutHelper__backward_Activation
+Inputs:
+	arg[0]=stage2_unit1_sc_backward(0)
+	arg[1]=stage2_unit1_conv1_backward(0)
+	arg[2]=stage2_unit1_relu1_mirror(0)
+Attrs:
+	num_inputs=3
+	num_outputs=1
+Control deps:
+	cdep[0]=stage2_unit1_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage2_unit1_bn1_mirror_backward
+Inputs:
+	arg[0]=add_n__FusedOpOutHelper__backward_Activation(0)
+	arg[1]=stage2_unit1_bn1_mirror(1)
+	arg[2]=stage2_unit1_bn1_mirror(2)
+	arg[3]=elemwise_add_elemwise_add(0)
+	arg[4]=stage2_unit1_bn1_gamma(0) version=0
+	arg[5]=stage2_unit1_bn1_beta(0) version=0
+	arg[6]=stage2_unit1_bn1_moving_mean(0) version=1
+	arg[7]=stage2_unit1_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage2_unit1_bn1_mirror
+--------------------
+Op:BatchNorm, Name=stage1_unit3_bn3_mirror
+Inputs:
+	arg[0]=stage1_unit3_conv2(0)
+	arg[1]=stage1_unit3_bn3_gamma(0) version=0
+	arg[2]=stage1_unit3_bn3_beta(0) version=0
+	arg[3]=stage1_unit3_bn3_moving_mean(0) version=1
+	arg[4]=stage1_unit3_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit3_relu3_mirror
+Inputs:
+	arg[0]=stage1_unit3_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage1_unit3_conv3_backward
+Inputs:
+	arg[0]=stage2_unit1_bn1_mirror_backward(0)
+	arg[1]=stage1_unit3_relu3_mirror(0)
+	arg[2]=stage1_unit3_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage1_unit3_conv3
+--------------------
+Op:_backward_Activation, Name=stage1_unit3_relu3_mirror_backward
+Inputs:
+	arg[0]=stage1_unit3_conv3_backward(0)
+	arg[1]=stage1_unit3_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage1_unit3_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage1_unit3_bn3_mirror_backward
+Inputs:
+	arg[0]=stage1_unit3_relu3_mirror_backward(0)
+	arg[1]=stage1_unit3_bn3_mirror(1)
+	arg[2]=stage1_unit3_bn3_mirror(2)
+	arg[3]=stage1_unit3_conv2(0)
+	arg[4]=stage1_unit3_bn3_gamma(0) version=0
+	arg[5]=stage1_unit3_bn3_beta(0) version=0
+	arg[6]=stage1_unit3_bn3_moving_mean(0) version=1
+	arg[7]=stage1_unit3_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage1_unit3_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage1_unit3_bn2_mirror
+Inputs:
+	arg[0]=stage1_unit3_conv1(0)
+	arg[1]=stage1_unit3_bn2_gamma(0) version=0
+	arg[2]=stage1_unit3_bn2_beta(0) version=0
+	arg[3]=stage1_unit3_bn2_moving_mean(0) version=1
+	arg[4]=stage1_unit3_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit3_relu2_mirror
+Inputs:
+	arg[0]=stage1_unit3_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage1_unit3_conv2_backward
+Inputs:
+	arg[0]=stage1_unit3_bn3_mirror_backward(0)
+	arg[1]=stage1_unit3_relu2_mirror(0)
+	arg[2]=stage1_unit3_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=64
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage1_unit3_conv2
+--------------------
+Op:_backward_Activation, Name=stage1_unit3_relu2_mirror_backward
+Inputs:
+	arg[0]=stage1_unit3_conv2_backward(0)
+	arg[1]=stage1_unit3_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage1_unit3_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage1_unit3_bn2_mirror_backward
+Inputs:
+	arg[0]=stage1_unit3_relu2_mirror_backward(0)
+	arg[1]=stage1_unit3_bn2_mirror(1)
+	arg[2]=stage1_unit3_bn2_mirror(2)
+	arg[3]=stage1_unit3_conv1(0)
+	arg[4]=stage1_unit3_bn2_gamma(0) version=0
+	arg[5]=stage1_unit3_bn2_beta(0) version=0
+	arg[6]=stage1_unit3_bn2_moving_mean(0) version=1
+	arg[7]=stage1_unit3_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage1_unit3_bn2_mirror
+--------------------
+Op:BatchNorm, Name=stage1_unit3_bn1_mirror
+Inputs:
+	arg[0]=elemwise_add_elemwise_add(1)
+	arg[1]=stage1_unit3_bn1_gamma(0) version=0
+	arg[2]=stage1_unit3_bn1_beta(0) version=0
+	arg[3]=stage1_unit3_bn1_moving_mean(0) version=1
+	arg[4]=stage1_unit3_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit3_relu1_mirror
+Inputs:
+	arg[0]=stage1_unit3_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage1_unit3_conv1_backward
+Inputs:
+	arg[0]=stage1_unit3_bn2_mirror_backward(0)
+	arg[1]=stage1_unit3_relu1_mirror(0)
+	arg[2]=stage1_unit3_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=64
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage1_unit3_conv1
+--------------------
+Op:_backward_Activation, Name=stage1_unit3_relu1_mirror_backward
+Inputs:
+	arg[0]=stage1_unit3_conv1_backward(0)
+	arg[1]=stage1_unit3_relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage1_unit3_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage1_unit3_bn1_mirror_backward
+Inputs:
+	arg[0]=stage1_unit3_relu1_mirror_backward(0)
+	arg[1]=stage1_unit3_bn1_mirror(1)
+	arg[2]=stage1_unit3_bn1_mirror(2)
+	arg[3]=elemwise_add_elemwise_add(1)
+	arg[4]=stage1_unit3_bn1_gamma(0) version=0
+	arg[5]=stage1_unit3_bn1_beta(0) version=0
+	arg[6]=stage1_unit3_bn1_moving_mean(0) version=1
+	arg[7]=stage1_unit3_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage1_unit3_bn1_mirror
+--------------------
+Op:add_n, Name=sum_grad
+Inputs:
+	arg[0]=stage2_unit1_bn1_mirror_backward(0)
+	arg[1]=stage1_unit3_bn1_mirror_backward(0)
+Attrs:
+	num_args=2
+--------------------
+Op:BatchNorm, Name=stage1_unit2_bn3_mirror
+Inputs:
+	arg[0]=stage1_unit2_conv2(0)
+	arg[1]=stage1_unit2_bn3_gamma(0) version=0
+	arg[2]=stage1_unit2_bn3_beta(0) version=0
+	arg[3]=stage1_unit2_bn3_moving_mean(0) version=1
+	arg[4]=stage1_unit2_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit2_relu3_mirror
+Inputs:
+	arg[0]=stage1_unit2_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage1_unit2_conv3_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage1_unit2_relu3_mirror(0)
+	arg[2]=stage1_unit2_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage1_unit2_conv3
+--------------------
+Op:_backward_Activation, Name=stage1_unit2_relu3_mirror_backward
+Inputs:
+	arg[0]=stage1_unit2_conv3_backward(0)
+	arg[1]=stage1_unit2_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage1_unit2_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage1_unit2_bn3_mirror_backward
+Inputs:
+	arg[0]=stage1_unit2_relu3_mirror_backward(0)
+	arg[1]=stage1_unit2_bn3_mirror(1)
+	arg[2]=stage1_unit2_bn3_mirror(2)
+	arg[3]=stage1_unit2_conv2(0)
+	arg[4]=stage1_unit2_bn3_gamma(0) version=0
+	arg[5]=stage1_unit2_bn3_beta(0) version=0
+	arg[6]=stage1_unit2_bn3_moving_mean(0) version=1
+	arg[7]=stage1_unit2_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage1_unit2_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage1_unit2_bn2_mirror
+Inputs:
+	arg[0]=stage1_unit2_conv1(0)
+	arg[1]=stage1_unit2_bn2_gamma(0) version=0
+	arg[2]=stage1_unit2_bn2_beta(0) version=0
+	arg[3]=stage1_unit2_bn2_moving_mean(0) version=1
+	arg[4]=stage1_unit2_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit2_relu2_mirror
+Inputs:
+	arg[0]=stage1_unit2_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage1_unit2_conv2_backward
+Inputs:
+	arg[0]=stage1_unit2_bn3_mirror_backward(0)
+	arg[1]=stage1_unit2_relu2_mirror(0)
+	arg[2]=stage1_unit2_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=64
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage1_unit2_conv2
+--------------------
+Op:_backward_Activation, Name=stage1_unit2_relu2_mirror_backward
+Inputs:
+	arg[0]=stage1_unit2_conv2_backward(0)
+	arg[1]=stage1_unit2_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage1_unit2_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage1_unit2_bn2_mirror_backward
+Inputs:
+	arg[0]=stage1_unit2_relu2_mirror_backward(0)
+	arg[1]=stage1_unit2_bn2_mirror(1)
+	arg[2]=stage1_unit2_bn2_mirror(2)
+	arg[3]=stage1_unit2_conv1(0)
+	arg[4]=stage1_unit2_bn2_gamma(0) version=0
+	arg[5]=stage1_unit2_bn2_beta(0) version=0
+	arg[6]=stage1_unit2_bn2_moving_mean(0) version=1
+	arg[7]=stage1_unit2_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage1_unit2_bn2_mirror
+--------------------
+Op:BatchNorm, Name=stage1_unit2_bn1_mirror
+Inputs:
+	arg[0]=_plus0(0)
+	arg[1]=stage1_unit2_bn1_gamma(0) version=0
+	arg[2]=stage1_unit2_bn1_beta(0) version=0
+	arg[3]=stage1_unit2_bn1_moving_mean(0) version=1
+	arg[4]=stage1_unit2_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit2_relu1_mirror
+Inputs:
+	arg[0]=stage1_unit2_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage1_unit2_conv1_backward
+Inputs:
+	arg[0]=stage1_unit2_bn2_mirror_backward(0)
+	arg[1]=stage1_unit2_relu1_mirror(0)
+	arg[2]=stage1_unit2_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=64
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage1_unit2_conv1
+--------------------
+Op:_backward_Activation, Name=stage1_unit2_relu1_mirror_backward
+Inputs:
+	arg[0]=stage1_unit2_conv1_backward(0)
+	arg[1]=stage1_unit2_relu1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage1_unit2_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage1_unit2_bn1_mirror_backward
+Inputs:
+	arg[0]=stage1_unit2_relu1_mirror_backward(0)
+	arg[1]=stage1_unit2_bn1_mirror(1)
+	arg[2]=stage1_unit2_bn1_mirror(2)
+	arg[3]=_plus0(0)
+	arg[4]=stage1_unit2_bn1_gamma(0) version=0
+	arg[5]=stage1_unit2_bn1_beta(0) version=0
+	arg[6]=stage1_unit2_bn1_moving_mean(0) version=1
+	arg[7]=stage1_unit2_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage1_unit2_bn1_mirror
+--------------------
+Op:add_n, Name=sum_grad
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage1_unit2_bn1_mirror_backward(0)
+Attrs:
+	num_args=2
+--------------------
+Op:BatchNorm, Name=bn0_mirror
+Inputs:
+	arg[0]=conv0(0)
+	arg[1]=bn0_gamma(0) version=0
+	arg[2]=bn0_beta(0) version=0
+	arg[3]=bn0_moving_mean(0) version=1
+	arg[4]=bn0_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=relu0_mirror
+Inputs:
+	arg[0]=bn0_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:Pooling, Name=pooling0_mirror
+Inputs:
+	arg[0]=relu0_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	pad=(1, 1)
+	pool_type=max
+	stride=(2, 2)
+--------------------
+Op:BatchNorm, Name=stage1_unit1_bn1_mirror
+Inputs:
+	arg[0]=pooling0_mirror(0)
+	arg[1]=stage1_unit1_bn1_gamma(0) version=0
+	arg[2]=stage1_unit1_bn1_beta(0) version=0
+	arg[3]=stage1_unit1_bn1_moving_mean(0) version=1
+	arg[4]=stage1_unit1_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit1_relu1_mirror
+Inputs:
+	arg[0]=stage1_unit1_bn1_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage1_unit1_sc_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage1_unit1_relu1_mirror(0)
+	arg[2]=stage1_unit1_sc_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage1_unit1_sc
+--------------------
+Op:BatchNorm, Name=stage1_unit1_bn3_mirror
+Inputs:
+	arg[0]=stage1_unit1_conv2(0)
+	arg[1]=stage1_unit1_bn3_gamma(0) version=0
+	arg[2]=stage1_unit1_bn3_beta(0) version=0
+	arg[3]=stage1_unit1_bn3_moving_mean(0) version=1
+	arg[4]=stage1_unit1_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit1_relu3_mirror
+Inputs:
+	arg[0]=stage1_unit1_bn3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage1_unit1_conv3_backward
+Inputs:
+	arg[0]=sum_grad(0)
+	arg[1]=stage1_unit1_relu3_mirror(0)
+	arg[2]=stage1_unit1_conv3_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=256
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage1_unit1_conv3
+--------------------
+Op:_backward_Activation, Name=stage1_unit1_relu3_mirror_backward
+Inputs:
+	arg[0]=stage1_unit1_conv3_backward(0)
+	arg[1]=stage1_unit1_relu3_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage1_unit1_relu3_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage1_unit1_bn3_mirror_backward
+Inputs:
+	arg[0]=stage1_unit1_relu3_mirror_backward(0)
+	arg[1]=stage1_unit1_bn3_mirror(1)
+	arg[2]=stage1_unit1_bn3_mirror(2)
+	arg[3]=stage1_unit1_conv2(0)
+	arg[4]=stage1_unit1_bn3_gamma(0) version=0
+	arg[5]=stage1_unit1_bn3_beta(0) version=0
+	arg[6]=stage1_unit1_bn3_moving_mean(0) version=1
+	arg[7]=stage1_unit1_bn3_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage1_unit1_bn3_mirror
+--------------------
+Op:BatchNorm, Name=stage1_unit1_bn2_mirror
+Inputs:
+	arg[0]=stage1_unit1_conv1(0)
+	arg[1]=stage1_unit1_bn2_gamma(0) version=0
+	arg[2]=stage1_unit1_bn2_beta(0) version=0
+	arg[3]=stage1_unit1_bn2_moving_mean(0) version=1
+	arg[4]=stage1_unit1_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+--------------------
+Op:Activation, Name=stage1_unit1_relu2_mirror
+Inputs:
+	arg[0]=stage1_unit1_bn2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+--------------------
+Op:_backward_Convolution, Name=stage1_unit1_conv2_backward
+Inputs:
+	arg[0]=stage1_unit1_bn3_mirror_backward(0)
+	arg[1]=stage1_unit1_relu2_mirror(0)
+	arg[2]=stage1_unit1_conv2_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	no_bias=True
+	num_filter=64
+	pad=(1, 1)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage1_unit1_conv2
+--------------------
+Op:_backward_Activation, Name=stage1_unit1_relu2_mirror_backward
+Inputs:
+	arg[0]=stage1_unit1_conv2_backward(0)
+	arg[1]=stage1_unit1_relu2_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=stage1_unit1_relu2_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage1_unit1_bn2_mirror_backward
+Inputs:
+	arg[0]=stage1_unit1_relu2_mirror_backward(0)
+	arg[1]=stage1_unit1_bn2_mirror(1)
+	arg[2]=stage1_unit1_bn2_mirror(2)
+	arg[3]=stage1_unit1_conv1(0)
+	arg[4]=stage1_unit1_bn2_gamma(0) version=0
+	arg[5]=stage1_unit1_bn2_beta(0) version=0
+	arg[6]=stage1_unit1_bn2_moving_mean(0) version=1
+	arg[7]=stage1_unit1_bn2_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage1_unit1_bn2_mirror
+--------------------
+Op:_backward_Convolution, Name=stage1_unit1_conv1_backward
+Inputs:
+	arg[0]=stage1_unit1_bn2_mirror_backward(0)
+	arg[1]=stage1_unit1_relu1_mirror(0)
+	arg[2]=stage1_unit1_conv1_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(1, 1)
+	no_bias=True
+	num_filter=64
+	pad=(0, 0)
+	stride=(1, 1)
+	workspace=256
+Control deps:
+	cdep[0]=stage1_unit1_conv1
+--------------------
+Op:_FusedOp, Name=add_n__FusedOpOutHelper__backward_Activation
+Inputs:
+	arg[0]=stage1_unit1_sc_backward(0)
+	arg[1]=stage1_unit1_conv1_backward(0)
+	arg[2]=stage1_unit1_relu1_mirror(0)
+Attrs:
+	num_inputs=3
+	num_outputs=1
+Control deps:
+	cdep[0]=stage1_unit1_relu1_mirror
+--------------------
+Op:_backward_BatchNorm, Name=stage1_unit1_bn1_mirror_backward
+Inputs:
+	arg[0]=add_n__FusedOpOutHelper__backward_Activation(0)
+	arg[1]=stage1_unit1_bn1_mirror(1)
+	arg[2]=stage1_unit1_bn1_mirror(2)
+	arg[3]=pooling0_mirror(0)
+	arg[4]=stage1_unit1_bn1_gamma(0) version=0
+	arg[5]=stage1_unit1_bn1_beta(0) version=0
+	arg[6]=stage1_unit1_bn1_moving_mean(0) version=1
+	arg[7]=stage1_unit1_bn1_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=stage1_unit1_bn1_mirror
+--------------------
+Op:_backward_Pooling, Name=pooling0_mirror_backward
+Inputs:
+	arg[0]=stage1_unit1_bn1_mirror_backward(0)
+	arg[1]=relu0_mirror(0)
+	arg[2]=pooling0_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	kernel=(3, 3)
+	pad=(1, 1)
+	pool_type=max
+	stride=(2, 2)
+Control deps:
+	cdep[0]=pooling0_mirror
+--------------------
+Op:_backward_Activation, Name=relu0_mirror_backward
+Inputs:
+	arg[0]=pooling0_mirror_backward(0)
+	arg[1]=relu0_mirror(0)
+Attrs:
+	__profiler_scope__=<unk>:
+	act_type=relu
+Control deps:
+	cdep[0]=relu0_mirror
+--------------------
+Op:_backward_BatchNorm, Name=bn0_mirror_backward
+Inputs:
+	arg[0]=relu0_mirror_backward(0)
+	arg[1]=bn0_mirror(1)
+	arg[2]=bn0_mirror(2)
+	arg[3]=conv0(0)
+	arg[4]=bn0_gamma(0) version=0
+	arg[5]=bn0_beta(0) version=0
+	arg[6]=bn0_moving_mean(0) version=1
+	arg[7]=bn0_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=False
+	momentum=0.9
+Control deps:
+	cdep[0]=bn0_mirror
+--------------------
+Op:BatchNorm, Name=bn_data_mirror
+Inputs:
+	arg[0]=id(0)
+	arg[1]=bn_data_gamma(0) version=0
+	arg[2]=bn_data_beta(0) version=0
+	arg[3]=bn_data_moving_mean(0) version=1
+	arg[4]=bn_data_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=True
+	momentum=0.9
+--------------------
+Op:_backward_Convolution, Name=conv0_backward
+Inputs:
+	arg[0]=bn0_mirror_backward(0)
+	arg[1]=bn_data_mirror(0)
+	arg[2]=conv0_weight(0) version=0
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+	kernel=(7, 7)
+	no_bias=True
+	num_filter=64
+	pad=(3, 3)
+	stride=(2, 2)
+	workspace=256
+Control deps:
+	cdep[0]=conv0
+--------------------
+Op:_backward_BatchNorm, Name=bn_data_mirror_backward
+Inputs:
+	arg[0]=conv0_backward(0)
+	arg[1]=bn_data_mirror(1)
+	arg[2]=bn_data_mirror(2)
+	arg[3]=id(0)
+	arg[4]=bn_data_gamma(0) version=0
+	arg[5]=bn_data_beta(0) version=0
+	arg[6]=bn_data_moving_mean(0) version=1
+	arg[7]=bn_data_moving_var(0) version=1
+Attrs:
+	__profiler_scope__=<unk>:
+	eps=2e-05
+	fix_gamma=True
+	momentum=0.9
+Control deps:
+	cdep[0]=bn_data_mirror
+--------------------
+Op:_copy, Name=id_backward
+Inputs:
+	arg[0]=bn_data_mirror_backward(0)
+Attrs:
+	__mirror_stage__=0
+	__profiler_scope__=<unk>:
+Control deps:
+	cdep[0]=id
+Total 1980 MB allocated
+Total 11 TempSpace resource requested
